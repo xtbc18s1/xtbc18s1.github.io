@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Xtern Bootcamp 2018</title>
+    <title>VS Code Keybindings :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1524688303" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/tools/code-keybindings/">
     <nav id="sidebar" class="">
 
 
@@ -533,7 +533,7 @@
   
     
     <li data-nav-id="/tools/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -576,7 +576,7 @@
  
   
     
-      <li data-nav-id="/tools/code-keybindings/" title="VS Code Keybindings" class="dd-item ">
+      <li data-nav-id="/tools/code-keybindings/" title="VS Code Keybindings" class="dd-item active">
         <a href="/tools/code-keybindings/">
         VS Code Keybindings
         
@@ -653,7 +653,19 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/tools/'>Tools</a> > VS Code Keybindings
+          
+         
+          
+         
           
            
                   </span>
@@ -661,7 +673,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#custom-keybindings-for-vs-code">Custom Keybindings for VS Code</a>
+<ul>
+<li><a href="#emmet">Emmet</a></li>
+<li><a href="#esquotes">ESQuotes</a></li>
+<li><a href="#embrace">Embrace</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -673,7 +697,7 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>VS Code Keybindings</h1>
           
 
         
@@ -681,9 +705,227 @@
 
 
 
+<div class="page-heading"><div>
+
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   role="img"
+   viewBox="0 0 500 516.8125"
+   id="vs-logo-svg"
+   aria-labelledby="vs-svg-title"
+   version="1.2">
+  <title id="vs-svg-title">Visual Studio Code</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#2d2c31"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="26.033824"
+     inkscape:cy="342.90908"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(0,-538.375)">
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 483.29234,602.44472 372.10411,557.87392 178.02375,746.87661 61.150238,657.90867 l -44.44058,22.35039 -0.04444,233.31307 44.23249,22.18974 116.777852,-88.89395 194.55776,188.82908 111.10146,-44.39718 z"
+       id="path2998"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#373277;stroke:none"
+       d="m 361.0373,713.50273 -111.05802,83.02234 111.10146,83.67329 z"
+       id="path3000"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#373277;stroke:none"
+       d="m 72.191838,746.97093 0.0667,99.85788 55.483402,-50.26641 z"
+       id="path3002"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
+
+
+
+<p>VS Code Keybindings</p>
+
+
+</div></div>
+
+<p>It&rsquo;s worth your time to get to know the keyboard shortcuts for whatever editor you use. We&rsquo;ve gone a step further and added some custom keybindings for some of the commands we use most.</p>
+
+<h2 id="custom-keybindings-for-vs-code">Custom Keybindings for VS Code</h2>
+
+<p>Open your Keyboard Shortcuts from the menu (<kbd>Code &gt; Preferences &gt; Keyboard Shortcuts</kbd>) or by using (what else?) the keyboard shortcut (<kbd>⌘</kbd>+<kbd>K</kbd>, <kbd>⌘</kbd>+<kbd>S</kbd>). From there, you can see all of the current keyboard shortcuts and customize them.</p>
+
+<p>For serious customization, click the link to open <em>keybindings.js</em>. That opens two panes: the default keybindings, and your custom bindings. My keybindings appear below. I&rsquo;ll talk about a few of them.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "alt+cmd+.",
+    "command": "editor.emmet.action.matchingPair"
+  },
+
+  {
+    "key": "shift+cmd+a",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+
+  {
+    "key": "cmd+'",
+    "command": "esQuotes.transformBetweenSingleDoubleQuotes"
+  },
+
+  {
+    "key": "ctrl+space",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !editorHasSelection && !editorReadonly"
+  },
+
+  {
+      "key": "ctrl+shift+space",
+      "command": "editor.emmet.action.splitJoinTag",
+      "when": "editorTextFocus && !editorHasMultipleSelections && !editorHasSelection && !editorReadonly"
+  },
+
+  {
+      "key": "ctrl+k ctrl+e",
+      "command": "extension.embraceParenthesis",
+      "when": "editorHasSelection && editorTextFocus"
+  },
+
+  {
+      "key": "ctrl+k ctrl+[",
+      "command": "extension.embraceSquareBrackets",
+      "when": "editorHasSelection && editorTextFocus"
+  },
+
+  {
+      "key": "ctrl+k ctrl+l",
+      "command": "extension.embraceCurlyBrackets",
+      "when": "editorHasSelection && editorTextFocus"
+  },
+
+  {
+      "key": "ctrl+k ctrl+a",
+      "command": "extension.embraceAngleBrackets",
+      "when": "editorHasSelection && editorTextFocus"
+  },
+
+  {
+      "key": "ctrl+k ctrl+'",
+      "command": "extension.embraceSingleQuotes",
+      "when": "editorHasSelection && editorTextFocus"
+  },
+
+  {
+      "key": "ctrl+k ctrl+o",
+      "command": "extension.embraceDoubleQuotes",
+      "when": "editorHasSelection && editorTextFocus"
+  }
+]
+
+</code>
+</pre>
+
+
+
+<h3 id="emmet">Emmet</h3>
+
+<p><a href="https://emmet.io/">Emmet</a> is a wonderful tool for expanding CSS selector-like snippets into HTML elements. For example, type <code>.container&gt;.row&gt;.col-xs-12&gt;p</code>, and Emmet will expand it into this:</p>
+
+
+<pre class="line-numbers language-html" rel="html">
+<code class="language-html">
+
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-12&quot;&gt;
+      &lt;p&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+
+
+
+<p>It will even put your cursor inside the <code>&lt;p&gt;&lt;/p&gt;</code> tags. And if you use it within JSX, it will use <code>className</code> instead of class, just as it should.</p>
+
+<p>By default, IntelliSense will suggest Emmet expansion just like any other autocompletion. Sometimes that&rsquo;s fine, but other times it can be a real pain in the neck. Thus, I prefer to set a custom shortcut: <kbd>ctrl</kbd>+<kbd>space</kbd>.</p>
+
+<p>When Emmet expands an abbreviation for a React component, it adds both a closing and opening tag.  Sometimes, we just want a single, self-closing tag.  In the keybindings listed in the previous section, we added one for <code>&quot;editor.emmet.action.splitJoinTag&quot;</code>.  This toggles between the open / closing tag and self-closing tag by pressing <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>space</kbd></p>
+
+<p>There&rsquo;s another really handy Emmet feature to which I&rsquo;ve assigned a shortcut: <em>wrap with abbreviation</em>. It allows you to wrap a selection inside an HTML element identified by an Emmet abbreviation. Select the text you want to wrap and hit the shortcut. You&rsquo;ll be presented with a box to type the abbreviation into. Magic! I&rsquo;ve assigned this command to <kbd>shift</kbd>+<kbd>⌘</kbd>+<kbd>A</kbd>.</p>
+
+<p>To make sure Emmet will work with JSX files suffixed with <code>.js</code>, add the following lines to your VSCode settings (<kbd>Code &gt; Preferences &gt; Settings</kbd>):</p>
+
+
+<pre class="line-numbers language-json" rel="json">
+<code class="language-json">
+
+"emmet.syntaxProfiles": {
+    "javascript": "jsx"
+}
+
+</code>
+</pre>
+
+
+
+<h3 id="esquotes">ESQuotes</h3>
+
+<p>I mentioned the ECMAScript Quotes Transformer extension earlier. This begs for a keyboard shortcut to quickly switch between single and double quotes: <kbd>⌘</kbd>+<kbd>&lsquo;</kbd>.</p>
+
+<h3 id="embrace">Embrace</h3>
+
+<p>As mentioned on the previous page, the Embrace extension does not assign any keybindings by default, so I configured some. My shortcuts vary slightly from the recommended shortcuts on the extension&rsquo;s page (in particular, I prefer <kbd>ctrl</kbd>+<kbd>K</kbd>, <kbd>ctrl</kbd>+<kbd>[</kbd> for wrapping with square brackets).</p>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1071,6 +1313,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1084,21 +1327,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1116,6 +1346,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1137,8 +1387,10 @@
 
 
         
+            <a class="nav nav-prev" href="/tools/code-extensions/" title="VS Code Extensions"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/prereqs/" title="Prerequisites" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/tools/github-desktop/" title="GitHub Desktop" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1168,3 +1420,4 @@
 
   </body>
 </html>
+

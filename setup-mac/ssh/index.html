@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Xtern Bootcamp 2018</title>
+    <title>SSH :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1524688303" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/setup-mac/ssh/">
     <nav id="sidebar" class="">
 
 
@@ -203,7 +203,7 @@
   
     
     <li data-nav-id="/setup-mac/" title="Setup for Mac" class="dd-item 
-        
+        parent
         
         
         ">
@@ -322,7 +322,7 @@
  
   
     
-      <li data-nav-id="/setup-mac/ssh/" title="SSH" class="dd-item ">
+      <li data-nav-id="/setup-mac/ssh/" title="SSH" class="dd-item active">
         <a href="/setup-mac/ssh/">
         SSH
         
@@ -653,7 +653,19 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/setup-mac/'>Setup for Mac</a> > SSH
+          
+         
+          
+         
           
            
                   </span>
@@ -661,7 +673,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#check-for-an-existing-key">Check for an existing key</a></li>
+<li><a href="#generate-an-ssh-key">Generate an SSH key</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -673,7 +693,7 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>SSH</h1>
           
 
         
@@ -681,9 +701,202 @@
 
 
 
+<div class="page-heading"><div>
+
+
+<p><i class="fa fa-terminal"></i> ssh</p>
+
+
+</div></div>
+
+<p>We recommend setting up an SSH key to simplify authentication with GitHub and other services.</p>
+
+<h2 id="check-for-an-existing-key">Check for an existing key</h2>
+
+<p>Make sure you&rsquo;re in your home directory. You should be by default, but you can double-check with the &ldquo;print working directory&rdquo; command: <code>pwd</code>. You should be in <code>/Users/yourusername</code>. If not, you can switch to that directory with the <code>cd</code> command, passing in the directory you want to switch to.</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+  
+<pre>
+<span class="command-line-prompt"><span data-prompt="$"></span>
+<span data-prompt="$"></span></span
+><span class="terminal-commands">pwd
+<span class="output-line">/some/other/dir</span>
+cd ~
+</span></pre>
+
+</div>
+</div>
+
+
+  <div class="aside aside-tip">
+  
+    <h4>~</h4>
+    
+  
+  <div class="body">
+  <p>You can always use a tilde <code>~</code> as a shortcut for your home directory.</p>
+
+  </div>
+</div>
+
+
+<p>Check to see if you already have an .ssh key configured:</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+  
+<pre>
+<span class="command-line-prompt"><span data-prompt="$"></span>
+</span
+><span class="terminal-commands">ls ~/.ssh/id_rsa
+<span class="output-line">/Users/dstrus/.ssh/id_rsa</span>
+
+</span></pre>
+
+</div>
+</div>
+
+<p>If it prints <code>/Users/yourusername/.ssh/id_rsa</code>, then you already have an SSH key and can skip to the next page. Otherwise, read on.</p>
+
+<h2 id="generate-an-ssh-key">Generate an SSH key</h2>
+
+<p>Type the following command to generate your SSH key, substituting the same email address you used for Git earlier:</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+<pre><span class="terminal-commands"
+><span class="command-line-prompt"><span data-prompt="$"></span></span>ssh-keygen -t rsa -C &#34;youremail@example.com&#34;
+</span></pre>
+
+</div>
+</div>
+
+<p>It should prompt you for a file name. You can just hit &lsquo;enter&rsquo; to accept the default.</p>
+
+<p>It will then prompt you for a password. You can just hit &lsquo;enter&rsquo; (twice) to not set a passphrase. That compromises your key should anyone gain access to your laptop, but it may be simpler for the sake of this course. When you truly want to maximize security, it&rsquo;s much safer to create a passphrase when generating a key.</p>
+
+<p>If all is well, you should see that your identification and your public key have been saved to <code>.ssh/id_rsa</code> and <code>.ssh/id_rsa.pub</code> respectively.</p>
+
+<p>Run the following command to add your new key to the SSH agent on your Mac:</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+<pre><span class="terminal-commands"
+><span class="command-line-prompt"><span data-prompt="$"></span></span>ssh-add ~/.ssh/id_rsa
+</span></pre>
+
+</div>
+</div>
+
+<p>You&rsquo;ll test your new key shortly, but first you&rsquo;ll need to create a GitHub account and add your public key to the account.</p>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -815,133 +1028,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -955,6 +1041,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1036,6 +1125,138 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1137,8 +1358,10 @@
 
 
         
+            <a class="nav nav-prev" href="/setup-mac/node/" title="Node.js"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/prereqs/" title="Prerequisites" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/setup-mac/github/" title="GitHub" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1168,3 +1391,4 @@
 
   </body>
 </html>
+

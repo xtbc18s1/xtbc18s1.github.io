@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Xtern Bootcamp 2018</title>
+    <title>Terminal :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1524688303" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/setup-windows/terminal/">
     <nav id="sidebar" class="">
 
 
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/setup-windows/" title="Setup for Windows" class="dd-item 
-        
+        parent
         
         
         ">
@@ -449,7 +449,7 @@
  
   
     
-      <li data-nav-id="/setup-windows/terminal/" title="Terminal" class="dd-item ">
+      <li data-nav-id="/setup-windows/terminal/" title="Terminal" class="dd-item active">
         <a href="/setup-windows/terminal/">
         Terminal
         
@@ -653,7 +653,19 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/setup-windows/'>Setup for Windows</a> > Terminal
+          
+         
+          
+         
           
            
                   </span>
@@ -661,7 +673,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hyper">Hyper</a></li>
+<li><a href="#configuring-hyper-to-run-bash">Configuring Hyper to Run Bash</a></li>
+<li><a href="#environment-variables">Environment Variables</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -673,7 +694,7 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>Terminal</h1>
           
 
         
@@ -681,9 +702,159 @@
 
 
 
+<div class="page-heading"><div>
+
+
+<p><i class="fa fa-terminal"></i> terminal</p>
+
+
+</div></div>
+
+<p>You&rsquo;ll be using the command line a fair amount in class. We&rsquo;ll be demonstrating everything on macOS, which is UNIX-based. Now that you&rsquo;ve installed Git Bash, you too have a UNIX-like shell and can run the same commands.</p>
+
+<p>As noted during setup, Git Bash can run in the default <code>cmd.exe</code> terminal, but it also comes with MinTTY. If you&rsquo;re on Windows 10, <code>cmd.exe</code> isn&rsquo;t quite the inexcusable piece of crap that it used to be. At least the dang window is resizable now&mdash;that only took 25 @#$% years! It&rsquo;s still a bit of pain though, and MinTTY has problems of its own. So let&rsquo;s not use either one!</p>
+
+<h2 id="hyper">Hyper</h2>
+
+<p>Although it isn&rsquo;t strictly required, I highly recommend installing <strong><a href="https://hyper.is/">Hyper</a></strong>. It&rsquo;s a terminal client written in JavaScript, HTML, and CSS&mdash;and it&rsquo;s cross-platform! In fact, I&rsquo;ll be using the Mac version of Hyper in class.</p>
+
+<p>Aside from being what I use, Hyper is much easier to use and to customize than <code>cmd.exe</code>, and it doesn&rsquo;t have MinTTY&rsquo;s issues with running native Windows apps.</p>
+
+<div class="download">
+<a href="https://hyper.is/"><i class="fa fa-download"></i> Download Hyper</a>
+</div>
+
+<h2 id="configuring-hyper-to-run-bash">Configuring Hyper to Run Bash</h2>
+
+<p>Now we need to configure Hyper to run Git Bash when it starts. To do so, let&rsquo;s edit its configuration file. Launch <strong>Git Bash</strong> (<em>not</em> Hyper!), and run the following command:</p>
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="shell windows">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  WINGW64:/c/Users/user
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+<pre><span class="terminal-commands"
+><span class="command-line-prompt"><span data-prompt="$"></span></span>code ~/.hyper.js
+</span></pre>
+
+</div>
+</div>
+
+<p>We need to change two settings: <em>shell</em> and <em>shellArgs</em>. Look for this section of the file, and make the changes shown on the highlighted lines:</p>
+
+
+  <pre class="language-js  "
+       
+       
+       data-line="6,10"
+       rel="js"
+  ><code class="language-js">
+  
+    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
+    // if left empty, your system's login shell will be used by default
+    // make sure to use a full path if the binary name doesn't work
+    // (e.g `C:\\Windows\\System32\\bash.exe` instead of just `bash.exe`)
+    // if you're using powershell, make sure to remove the `--login` below
+    shell: 'C:\\Program Files\\Git\\git-cmd.exe',
+
+    // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
+    // by default ['--login'] will be used
+    shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],
+
+  </code>
+  </pre>
+
+
+
+<p>With that saved, you can quit Git Bash, and run Hyper, which will actually be running the Git Bash shell now. If you want to tweak more settings you can now run the <code>code ~/.hyper.js</code> command from Hyper. Feel free to poke around the preferences file for anything else you&rsquo;d like to tweak, such as font size.</p>
+
+<h2 id="environment-variables">Environment Variables</h2>
+
+<p>Things still aren&rsquo;t set up quite the way we want. Certain commands won&rsquo;t work quite right without another tweak, and we&rsquo;d like to set Visual Studio Code as the default editor. Set a couple of environment variables by issuing the following command:</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+<pre><span class="terminal-commands"
+><span class="command-line-prompt"><span data-prompt="$"></span></span>echo -e &#34;export TERM=cygwin\nexport EDITOR=code\n&#34; &gt; .bash_profile
+</span></pre>
+
+</div>
+</div>
+
+<p>This creates the file <code>.bash_profile</code> in your home directory, with the following contents:</p>
+
+
+  <pre class="language-bash line-numbers "
+       
+       
+       
+       rel=".bash_profile"
+  ><code class="language-bash">
+  
+export TERM=cygwin
+export EDITOR=code
+
+
+  </code>
+  </pre>
+
+
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -943,6 +1114,142 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -999,134 +1306,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1137,8 +1316,10 @@
 
 
         
+            <a class="nav nav-prev" href="/setup-windows/git/" title="Git"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/prereqs/" title="Prerequisites" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/setup-windows/node/" title="Node.js" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1168,3 +1349,4 @@
 
   </body>
 </html>
+
