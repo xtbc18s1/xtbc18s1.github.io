@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Editor :: Xtern Bootcamp 2018</title>
+    <title>Day 2: Functions and The DOM :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1526416061" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/setup-mac/editor/">
+  <body class="" data-url="/week1/day2/">
     <nav id="sidebar" class="">
 
 
@@ -203,7 +203,7 @@
   
     
     <li data-nav-id="/setup-mac/" title="Setup for Mac" class="dd-item 
-        parent
+        
         
         
         ">
@@ -246,7 +246,7 @@
  
   
     
-      <li data-nav-id="/setup-mac/editor/" title="Editor" class="dd-item active">
+      <li data-nav-id="/setup-mac/editor/" title="Editor" class="dd-item ">
         <a href="/setup-mac/editor/">
         Editor
         
@@ -622,7 +622,7 @@
   
     
     <li data-nav-id="/week1/" title="Week One" class="dd-item 
-        
+        parent
         
         
         ">
@@ -665,7 +665,7 @@
  
   
     
-      <li data-nav-id="/week1/day2/" title="Day 2: Functions and The DOM" class="dd-item ">
+      <li data-nav-id="/week1/day2/" title="Day 2: Functions and The DOM" class="dd-item active">
         <a href="/week1/day2/">
         Day 2: Functions and The DOM
         
@@ -731,7 +731,7 @@
             
           
           
-            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/setup-mac/'>Setup for Mac</a> > Editor
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week1/'>Week One</a> > Day 2: Functions and The DOM
           
          
           
@@ -747,12 +747,29 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#lecture-videos">Lecture Videos</a></li>
+<li><a href="#topics">Topics</a>
 <ul>
-<li><a href="#recommended-extensions-for-vs-code">Recommended Extensions for VS Code</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#git">Git</a></li>
+<li><a href="#dom">DOM</a></li>
 </ul></li>
-<li><a href="#other-editors">Other Editors</a></li>
-<li><a href="#dock-that-rascal">Dock That Rascal</a></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#functions-1">Functions</a></li>
+<li><a href="#dom-1">DOM</a></li>
+</ul></li>
+<li><a href="#presentations">Presentations</a></li>
+<li><a href="#projects">Projects</a>
+<ul>
+<li><a href="#user-directory">User Directory</a></li>
+</ul></li>
+<li><a href="#homework">Homework</a>
+<ul>
+<li><a href="#bonus-credit">Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit-hyper-fighting">Super Mega Bonus Credit Hyper Fighting</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -767,7 +784,7 @@
         
         <div id="body-inner">
           
-            <h1>Editor</h1>
+            <h1>Day 2: Functions and The DOM</h1>
           
 
         
@@ -775,134 +792,166 @@
 
 
 
-<p>You&rsquo;ll need a code-friendly text editor. If you already have a strong preference for one in particular, knock yourself out. If not, we have a recommendation.</p>
+<p><date>Tuesday, May 15, 2018</date></p>
 
-<div class="page-heading"><div>
+<h2 id="lecture-videos">Lecture Videos</h2>
 
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   role="img"
-   viewBox="0 0 500 516.8125"
-   id="vs-logo-svg"
-   aria-labelledby="vs-svg-title"
-   version="1.2">
-  <title id="vs-svg-title">Visual Studio Code</title>
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#2d2c31"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="26.033824"
-     inkscape:cy="342.90908"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     style="display:inline"
-     transform="translate(0,-538.375)">
-    <path
-       style="fill:#ffffff;stroke:none"
-       d="M 483.29234,602.44472 372.10411,557.87392 178.02375,746.87661 61.150238,657.90867 l -44.44058,22.35039 -0.04444,233.31307 44.23249,22.18974 116.777852,-88.89395 194.55776,188.82908 111.10146,-44.39718 z"
-       id="path2998"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#373277;stroke:none"
-       d="m 361.0373,713.50273 -111.05802,83.02234 111.10146,83.67329 z"
-       id="path3000"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#373277;stroke:none"
-       d="m 72.191838,746.97093 0.0667,99.85788 55.483402,-50.26641 z"
-       id="path3002"
-       inkscape:connector-curvature="0" />
-  </g>
-</svg>
-
-
-
-<p>Visual Studio Code</p>
-
-
-</div></div>
-
-<p><strong><a href="http://code.visualstudio.com/">Visual Studio Code</a></strong> is a free, open source editor from Microsoft&mdash;but don&rsquo;t let that scare you. It doesn&rsquo;t feel the least bit like a lazy port of a Windows product, because it isn&rsquo;t one. It was built from the ground up to be cross-platform. It&rsquo;s only three years old, but it&rsquo;s impressive.</p>
-
-<p>VS Code is particularly well suited for JavaScript development. It has Microsoft&rsquo;s famous IntelliSense, built-in support for Git, and a variety of extensions to make our lives easier.</p>
-
-<p>We will be using Visual Studio Code in class.</p>
-
-<p><div class="download">
-<a href="http://code.visualstudio.com/"><i class="fa fa-download"></i> Download Visual Studio Code</a>
-</div></p>
-
-<h3 id="recommended-extensions-for-vs-code">Recommended Extensions for VS Code</h3>
+<p>Morning:</p>
 
 <ul>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons"><strong>vscode-icons</strong></a> shows icons in the sidebar that correspond to the file type.</li>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=KGsggCwZA0Y&amp;index=6&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Day 2, part 1</a></li>
 </ul>
 
-<h2 id="other-editors">Other Editors</h2>
-
-<p><strong><a href="https://atom.io/">Atom</a></strong> is a free, open source editor from GitHub. It&rsquo;s only been around a little longer than Code&mdash;about four years&mdash;but it&rsquo;s quickly become a favorite. If you aren&rsquo;t interested in VS Code, give Atom a chance.</p>
-
-<p><strong><a href="https://www.sublimetext.com/">Sublime Text</a></strong> is another popular choice. Many of Atom&rsquo;s features are borrowed from Sublime Text (which took them from TextMate). Sublime Text is commercial software, although the trial version does not expire. If you like it, consider coughing up the $80.</p>
-
-<p>If you&rsquo;re used to a full IDE, <strong><a href="http://www.jetbrains.com/webstorm/">WebStorm</a></strong> might be more up your alley. Be warned: It&rsquo;s subscription-based, and is $12.90/month, or $129.00 the first year. You may find that Visual Studio Code has most of the features you need. We&rsquo;ve never used WebStorm ourselves, so we won&rsquo;t be much help should you run into trouble.</p>
-
-<h2 id="dock-that-rascal">Dock That Rascal</h2>
-
-<p>Whichever editor you use, you&rsquo;ll use it enough that I recommend keeping it in the Dock as well.</p>
-
-
-  <div class="aside aside-tip">
-  
-    <h4>Theme Info</h4>
-    
-  
-  <div class="body">
-  <p>Since I&rsquo;m always asked, I use the following themes:</p>
+<p>Afternoon:</p>
 
 <ul>
-<li>Code: <em>Oceanic Next Italic</em></li>
-<li>Atom: <em>Atom Dark</em> UI theme; <em>Kobalt</em> syntax theme (with some personal customizations)</li>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | [Day 2, part 1]()</li>
 </ul>
 
-  </div>
-</div>
+<h2 id="topics">Topics</h2>
 
+<h3 id="functions">Functions</h3>
+
+<ul>
+<li>Function Expressions</li>
+<li>Function Declarations</li>
+<li>Function Hoisting (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">MDN</a>)</li>
+</ul>
+
+<h3 id="git">Git</h3>
+
+<ul>
+<li><a href="http://rogerdudler.github.io/git-guide/">Git Guide</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">Git Basics</a></li>
+<li><a href="https://hackernoon.com/understanding-git-fcffd87c15a3">Understanding Git (part 1): Explain It Like I&rsquo;m Five</a></li>
+</ul>
+
+<div class="img github-flow"></div>
+
+<h3 id="dom">DOM</h3>
+
+<ul>
+<li>Adding HTML content to an existing element with <code>someElement.innerHTML</code></li>
+<li>Creating elements with <code>document.createElement</code></li>
+<li>Setting style properties with <code>someElement.style.stylePropertyName</code></li>
+<li>Appending child elements with <code>someElement.appendChild</code></li>
+<li><a href="https://zellwk.com/blog/rem-vs-em/">REM vs EM - The Great Debate</a></li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="functions-1">Functions</h3>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+  // function declaration - use 'function' keyword
+  function aMostExcellentFunction() {
+    console.log('This function is great!')
+  }
+
+  aMostExcellentFunction() // => 'This function is great!'
+
+  // function expression - defines a function as part of a larger expression syntax
+  // (usually assignment to a variable)
+  const anotherExcellentFunction = () => {
+    console.log('This function is also great!')
+  }
+
+  anotherExcellentFunction() // => 'This function is also great!'
+
+</code>
+</pre>
+
+
+
+<h3 id="dom-1">DOM</h3>
+
+<p>If we start with the following markup:
+
+<pre class="line-numbers language-html" rel="html">
+<code class="language-html">
+
+&lt;div id=&quot;my-div&quot;&gt;&lt;/div&gt;
+
+</code>
+</pre>
+
+
+We can add additional markup to it programmatically using JavaScript.  One way is to create new HTMl elements using <code>document.createElement</code>, and adding them by using <code>appendChild</code>.  Styling of the element can even be changed by manipulating the element&rsquo;s <code>style</code> property.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+// create an h1 and modify text content and color
+const heading = document.createElement('h1')
+heading.textContent = "This is the best heading I've ever seen"
+heading.style.color = "red"
+
+// get a reference to the existing div and add the heading as a child element
+const div = document.querySelector('#my-div')
+div.appendChild(heading)
+
+</code>
+</pre>
+
+
+
+<p>This will produce the following markup:
+
+<pre class="line-numbers language-html" rel="html">
+<code class="language-html">
+
+&lt;div id=&quot;my-div&quot;&gt;
+  &lt;h1 style=&quot;color: red;&quot;&gt;This is the best heading I've ever seen&lt;/h1&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+
+</p>
+
+<h2 id="presentations">Presentations</h2>
+
+<ul>
+<li><a target="_blank" href="/day02.pdf">Review: HTML and the DOM</a></li>
+</ul>
+
+<h2 id="projects">Projects</h2>
+
+<h3 id="user-directory">User Directory</h3>
+
+<p><a href="https://github.com/xtbc18s1/user-directory/tree/master">Morning</a> | <a href="https://github.com/xtbc18s1/user-directory/tree/afternoon">Afternoon</a></p>
+
+<h2 id="homework">Homework</h2>
+
+<ul>
+<li>Create a new function called <code>renderColor</code> that returns a <code>div</code> element.</li>
+<li>Call that function when adding that <code>div</code> to <code>colorItem</code>.</li>
+</ul>
+
+<h3 id="bonus-credit">Bonus Credit</h3>
+
+<ul>
+<li>Create a new function called <code>renderListItem</code>.</li>
+<li>Use it to create list items for each stat.</li>
+</ul>
+
+<h3 id="super-mega-bonus-credit">Super Mega Bonus Credit</h3>
+
+<ul>
+<li>Create a new function called <code>renderList</code>.</li>
+<li>Use it to create the list for each person&rsquo;s stats.</li>
+<li>Call <code>renderListItem</code> from <code>renderList</code>, not directly from <code>handleSubmit</code>.</li>
+</ul>
+
+<h3 id="super-mega-bonus-credit-hyper-fighting">Super Mega Bonus Credit Hyper Fighting</h3>
+
+<ul>
+<li>Be Strong!  Do not resort to the use of <code>innerHTML</code>.  Keep using <code>document.createElement</code>.</li>
+</ul>
 
 
 <footer class=" footline" >
@@ -1040,7 +1089,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1053,26 +1101,6 @@
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1090,8 +1118,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1368,6 +1409,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1381,6 +1423,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1397,6 +1442,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1418,10 +1464,10 @@
 
 
         
-            <a class="nav nav-prev" href="/setup-mac/chrome/" title="Chrome"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/week1/day1/" title="Day 1: Introduction"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/setup-mac/terminal/" title="Terminal" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/week1/day1/" title="Day 1: Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
