@@ -130,6 +130,19 @@ Intermediate JavaScript 30 by Wes Bos I highly recommend completing JavaScript 3
     </item>
     
     <item>
+      <title>Day 3: Arrays and Objects</title>
+      <link>http://xtbc18s1.github.io/week1/day3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xtbc18s1.github.io/week1/day3/</guid>
+      <description>Wednesday, May 16, 2018
+Lecture Videos Morning:
+ Playlist | Day 3, Part 1  Afternoon:
+ Playlist | Day 3, Part 1  Topics Arrays  Array.map - Docs on MDN Understanding JavaScript&amp;rsquo;s map() blog post  Objects  Object literals Property Naming Retrieving property values Setting property values  Arrays and Objects CodePen Example
+Handling exceptions  try catch finally  Flexbox  A Complete Guide to Flexbox Flexbox.</description>
+    </item>
+    
+    <item>
       <title>Git</title>
       <link>http://xtbc18s1.github.io/setup-windows/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
