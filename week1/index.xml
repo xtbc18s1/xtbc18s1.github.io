@@ -47,5 +47,17 @@ Lecture Videos Morning:
 Handling exceptions  try catch finally  Styling Flexbox  A Complete Guide to Flexbox Flexbox.</description>
     </item>
     
+    <item>
+      <title>Day 4: Cloning Elements and Data Attributes</title>
+      <link>http://xtbc18s1.github.io/week1/day4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xtbc18s1.github.io/week1/day4/</guid>
+      <description>Thursday, May 17, 2018
+Lecture Videos Morning:
+ Playlist | Day 4, Part 1  Afternoon:
+ Playlist | [Day 4, Part 1]()  Topics Markdown  Markdown Cheatsheet Mastering Markdown  DOM Manipulation  data attributes parentElement childNodes firstChild firstElementChild insertBefore closest (experimental)  Array methods  Array.prototype documentation on MDN unshift() reverse()  Foundation Foundation is a CSS (and JS) framework that makes it easy to create stylish, responsive web pages.</description>
+    </item>
+    
   </channel>
 </rss>

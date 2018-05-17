@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Xtern Bootcamp 2018</title>
+    <title>Day 4: Cloning Elements and Data Attributes :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1526592693" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/week1/day4/">
     <nav id="sidebar" class="">
 
 
@@ -622,7 +622,7 @@
   
     
     <li data-nav-id="/week1/" title="Week One" class="dd-item 
-        
+        parent
         
         
         ">
@@ -703,7 +703,7 @@
  
   
     
-      <li data-nav-id="/week1/day4/" title="Day 4: Cloning Elements and Data Attributes" class="dd-item ">
+      <li data-nav-id="/week1/day4/" title="Day 4: Cloning Elements and Data Attributes" class="dd-item active">
         <a href="/week1/day4/">
         Day 4: Cloning Elements and Data Attributes
         
@@ -761,7 +761,19 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week1/'>Week One</a> > Day 4: Cloning Elements and Data Attributes
+          
+         
+          
+         
           
            
                   </span>
@@ -769,7 +781,34 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#lecture-videos">Lecture Videos</a></li>
+<li><a href="#topics">Topics</a>
+<ul>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#dom-manipulation">DOM Manipulation</a></li>
+<li><a href="#array-methods">Array methods</a></li>
+<li><a href="#foundation">Foundation</a></li>
+</ul></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#data-attributes">Data Attributes</a></li>
+<li><a href="#clonenode"><code>.cloneNode</code></a></li>
+<li><a href="#array-methods-1">Array methods</a></li>
+</ul></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#homework">Homework</a>
+<ul>
+<li><a href="#bonus-credit">Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit-hyper-fighting">Super Mega Bonus Credit Hyper Fighting</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -781,7 +820,7 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>Day 4: Cloning Elements and Data Attributes</h1>
           
 
         
@@ -789,9 +828,271 @@
 
 
 
+<p><date>Thursday, May 17, 2018</date></p>
+
+<h2 id="lecture-videos">Lecture Videos</h2>
+
+<p>Morning:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=l49C0WKrjMM&amp;index=39&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Day 4, Part 1</a></li>
+</ul>
+
+<p>Afternoon:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | [Day 4, Part 1]()</li>
+</ul>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="markdown">Markdown</h3>
+
+<ul>
+<li><a href="http://assemble.io/docs/Cheatsheet-Markdown.html">Markdown Cheatsheet</a></li>
+<li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a></li>
+</ul>
+
+<h3 id="dom-manipulation">DOM Manipulation</h3>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data attributes</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement">parentElement</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes">childNodes</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild">firstChild</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">firstElementChild</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore">insertBefore</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">closest</a> (experimental)</li>
+</ul>
+
+<h3 id="array-methods">Array methods</h3>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype?v=control"><code>Array.prototype</code> documentation on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift?v=control"><code>unshift()</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse?v=control"><code>reverse()</code></a></li>
+</ul>
+
+<h3 id="foundation">Foundation</h3>
+
+<p>Foundation is a CSS (and JS) framework that makes it easy to create stylish, responsive web pages.  The foundation (get it?) of it is the <a href="http://foundation.zurb.com/grid.html">grid system</a>.  The grid splits the page into 12 equally-sized columns, making it easy to set the alignment of elements on the page by specifying how many columns they span.</p>
+
+<p>In addition, you can add sizes of &lsquo;small&rsquo;, &lsquo;medium&rsquo;, &lsquo;large&rsquo;, etc, to specify different behavior at different screen sizes.  In the following example, the two child divs will be full screen width at small screen sizes (stacked on top of each other), and half of the screen width at medium and larger screen sizes (appearing next to each other).</p>
+
+
+<pre class="line-numbers language-html" rel="html">
+<code class="language-html">
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+
+
+
+<ul>
+<li><a href="http://foundation.zurb.com">Foundation CSS Framework</a></li>
+<li><a href="http://foundation.zurb.com/sites/docs/button.html">Button</a></li>
+<li><a href="http://foundation.zurb.com/sites/docs/button-group.html">Button Group</a></li>
+<li><a href="http://foundation.zurb.com/sites/docs/typography-helpers.html#un-bulleted-list">Un-bulleted List</a></li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="data-attributes">Data Attributes</h3>
+
+<p>HTML5 gave us a way to save extra information on a standard HTML Element via the <code>data-*</code> attributes. Basically, you can add any arbitrary information you want, prefixing the name of the attribute with <code>data-</code>.  This data is then accessible through JavaScript via the <code>someElement.dataset</code> object, or through CSS via <code>attr(data-*)</code>.</p>
+
+
+<pre class="line-numbers language-html" rel="html">
+<code class="language-html">
+
+&lt;div
+  id="my-div"
+  data-name="Awesome div"
+  data-id="div-1234"
+  data-color="blue"
+  data-marshmallows="yummy"&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+
+
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+const myDiv = document.querySelector('#my-div')
+
+myDiv.dataset.name            // "Awesome div"
+myDiv.dataset.data-id         // "div-1234"
+myDiv.dataset.color           // "blue"
+myDiv.dataset.marshmallows    // "yummy"
+
+</code>
+</pre>
+
+
+
+
+<pre class="line-numbers language-css" rel="css">
+<code class="language-css">
+
+#my-div {
+  background-color: attr(data-color);
+}
+
+div[data-id='div-1234'] {
+  height: 400px;
+  width: 400px;
+}
+
+</code>
+</pre>
+
+
+
+<h3 id="clonenode"><code>.cloneNode</code></h3>
+
+<p>Sometimes it may be easier to clone an existing node rather than build an entirely new one, especially if the markup is complex.  In our &lsquo;Tatum Tots&rsquo; project, we kept a hidden <code>li</code> in the DOM that we cloned every time we needed to render a new list item.</p>
+
+
+<pre class="line-numbers language-html" rel="html">
+<code class="language-html">
+
+&lt;li class="flick grid-x align-middle template"&gt;
+  &lt;span class="flick-name cell auto"&gt;sdfkjhgds&lt;/span&gt;
+  &lt;span class="actions button-group cell shrink"&gt;
+    &lt;button class="fav button warning"&gt;fav&lt;/button&gt;
+    &lt;button class="remove button alert"&gt;del&lt;/button&gt;
+  &lt;/span&gt;
+&lt;/li&gt;
+
+</code>
+</pre>
+
+
+
+
+<pre class="line-numbers language-css" rel="css">
+<code class="language-css">
+
+/* hides any 'li' with a 'template' class */
+li.template {
+  display: none;
+}
+
+</code>
+</pre>
+
+
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+const list = document.querySelector('ul')
+const templateItem = document.querySelector('li.template')
+
+// Make a copy of the templateItem
+// Pass 'true' as an argument to clone all children as well
+const newItem = templateItem.cloneNode(true)
+
+// remove 'template' class so it is no longer hidden
+newItem.classList.remove('template')
+
+list.appendChild(newItem)
+
+</code>
+</pre>
+
+
+
+<h3 id="array-methods-1">Array methods</h3>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+const ary = [1, 2, 3, 4, 5]
+
+ary.unshift(0)
+
+console.log(ary)    // [0, 1, 2, 3, 4, 5]
+
+ary.shift()         // 0
+
+console.log(ary)    // [1, 2, 3, 4, 5]
+
+ary.reverse()
+
+console.log(ary)    // [5, 4, 3, 2, 1]
+
+</code>
+</pre>
+
+
+
+<h2 id="projects">Projects</h2>
+
+<p>Tatum Tots
+* <a href="https://github.com/xtbc18s1/tatum-tots">Morning</a>
+* <a href="https://github.com/xtbc18s1/tatum-tots/tree/afternoon">Afternoon</a></p>
+
+<h2 id="homework">Homework</h2>
+
+<ul>
+<li>Make the <em>delete</em> button <strong>work</strong>, if you haven&rsquo;t already.</li>
+<li>Make the <em>fav</em> button change the style of the list item in some way.</li>
+</ul>
+
+<h3 id="bonus-credit">Bonus Credit</h3>
+
+<ul>
+<li>Make the <em>fav</em> button also change the object in the array. For example:</li>
+</ul>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+{
+  id: 1,
+  name: 'GI Joe',
+  fav: true,
+}
+
+</code>
+</pre>
+
+
+
+<h3 id="super-mega-bonus-credit">Super Mega Bonus Credit</h3>
+
+<ul>
+<li>Add buttons to move the flick up and down the list.</li>
+<li>Make the buttons also change their place in the array.</li>
+</ul>
+
+<h3 id="super-mega-bonus-credit-hyper-fighting">Super Mega Bonus Credit Hyper Fighting</h3>
+
+<ul>
+<li>Allow users to edit the names of the flicks in the list after they&rsquo;re added.</li>
+</ul>
+
+<p>(Would it be nice if we could make that span&rsquo;s <strong>content editable</strong>?)</p>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -1243,6 +1544,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1250,6 +1552,25 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1288,21 +1609,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1325,8 +1631,10 @@
 
 
         
+            <a class="nav nav-prev" href="/week1/day3/" title="Day 3: Arrays and Objects"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/prereqs/" title="Prerequisites" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/week1/day1/" title="Day 1: Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1356,3 +1664,4 @@
 
   </body>
 </html>
+
