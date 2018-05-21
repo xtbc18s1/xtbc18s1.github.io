@@ -59,7 +59,7 @@ Lecture Videos Morning:
       <description>Monday, May 21, 2018
 Lecture Videos Morning:
  Playlist | Day 5, Part 1  Afternoon:
- Playlist | [Day 4, Part 1]()  Topics DOM Manipulation  contenteditable - MDN documentation keypress events  ES2015+ (ES6+)  Inheritance (with the ES2015 class syntax; it&amp;rsquo;s still prototypal inheritance though) - ES2015 classes on Babel Modules (import/export) - ES2015 modules on Babel  React  Imperative vs. Declarative Components  JSX - Docs: Introducing JSX Props - Docs: Components and Props State - Docs: State and Lifecycle  create-react-app  Examples DOM Manipulation contentEditable is a property that, like the name suggests, allows the content of an HTML element to be edited through user interaction with the DOM (similar to a text input field).</description>
+ Playlist | [Day 5, Part 1]https://www.youtube.com/watch?v=iTl36ideQhg&amp;amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk&amp;amp;index=54)  Topics DOM Manipulation  contenteditable - MDN documentation keypress events  ES2015+ (ES6+)  Inheritance (with the ES2015 class syntax; it&amp;rsquo;s still prototypal inheritance though) - ES2015 classes on Babel Modules (import/export) - ES2015 modules on Babel  React  Imperative vs. Declarative Components  JSX - Docs: Introducing JSX Props - Docs: Components and Props State - Docs: State and Lifecycle  create-react-app  Examples DOM Manipulation contentEditable is a property that, like the name suggests, allows the content of an HTML element to be edited through user interaction with the DOM (similar to a text input field).</description>
     </item>
     
     <item>
