@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Git :: Xtern Bootcamp 2018</title>
+    <title>Day 6: React :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1527019518" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/prereqs/git/">
+  <body class="" data-url="/week2/day6/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/prereqs/" title="Prerequisites" class="dd-item 
-        parent
+        
         
         
         ">
@@ -157,7 +157,7 @@
  
   
     
-      <li data-nav-id="/prereqs/git/" title="Git" class="dd-item active">
+      <li data-nav-id="/prereqs/git/" title="Git" class="dd-item ">
         <a href="/prereqs/git/">
         Git
         
@@ -730,7 +730,7 @@
   
     
     <li data-nav-id="/week2/" title="Week Two" class="dd-item 
-        
+        parent
         
         
         ">
@@ -773,7 +773,7 @@
  
   
     
-      <li data-nav-id="/week2/day6/" title="Day 6: React" class="dd-item ">
+      <li data-nav-id="/week2/day6/" title="Day 6: React" class="dd-item active">
         <a href="/week2/day6/">
         Day 6: React
         
@@ -839,7 +839,7 @@
             
           
           
-            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/prereqs/'>Prerequisites</a> > Git
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week2/'>Week Two</a> > Day 6: React
           
          
           
@@ -855,10 +855,31 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#recap">Recap</a></li>
+<li><a href="#lecture-videos">Lecture Videos</a></li>
+<li><a href="#topics">Topics</a>
 <ul>
-<li><a href="#learn-git-from-codecademy">Learn Git from Codecademy</a></li>
-<li><a href="#try-git-from-code-school">Try Git from Code School</a></li>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#react">React</a></li>
+</ul></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#variable-scope">Variable Scope</a></li>
+<li><a href="#react-https-facebook-github-io-react"><a href="https://facebook.github.io/react/">React</a></a>
+<ul>
+<li><a href="#using-map-with-components">Using <code>map</code> with Components</a></li>
+<li><a href="#stateless-functional-components">Stateless Functional Components</a></li>
+</ul></li>
+<li><a href="#javascript-es6">JavaScript (ES6+)</a>
+<ul>
+<li><a href="#named-and-default-exports-and-imports">Named and default exports and imports</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#homework">Homework</a>
+<ul>
+<li><a href="#bonus-credit">Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -874,7 +895,7 @@
         
         <div id="body-inner">
           
-            <h1>Git</h1>
+            <h1>Day 6: React</h1>
           
 
         
@@ -882,28 +903,332 @@
 
 
 
-<p>We will be using Git for source code management&mdash;and hosting our repositories on <a href="https://github.com">GitHub</a>&mdash;throughout the bootcamp. It will help if you&rsquo;re not seeing it for the first time.</p>
+<p><date>Tuesday, May 22, 2018</date></p>
+
+<h2 id="recap">Recap</h2>
+
+<ul>
+<li>Reactrobats (take two): <a href="https://codepen.io/dstrus/professor/gzEZKd/">Morning</a></li>
+</ul>
+
+<h2 id="lecture-videos">Lecture Videos</h2>
+
+<p>Morning:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=iwe0wOMVfwc&amp;index=64&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Day 6, Part 1</a></li>
+</ul>
+
+<p>Afternoon:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | <a href="https://www.youtube.com/watch?v=p_CZgN4DWSE&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk&amp;index=66">Day 6, Part 1</a></li>
+</ul>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="scope">Scope</h3>
+
+<ul>
+<li>Variable Scope (<code>var</code>, <code>const</code>, <code>let</code>)</li>
+</ul>
+
+<h3 id="react">React</h3>
+
+<ul>
+<li>Using <code>map</code> with components</li>
+<li>Stateless Functional Components
+
+<ul>
+<li><a href="http://javascriptplayground.com/blog/2017/03/functional-stateless-components-react/">Functional Stateless Components in React</a></li>
+<li><a href="https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/">Functional Components vs. Stateless Functional Components vs. Stateless Components</a></li>
+<li><a href="https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc">Nine Wins You Might Have Overlooked</a></li>
+</ul></li>
+<li><a href="https://hackernoon.com/all-you-need-to-know-about-css-in-js-984a72d48ebc">CSS in JS</a></li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="variable-scope">Variable Scope</h3>
+
+<p>The biggest difference between <code>var</code> and <code>let</code> is that <code>var</code> variables are scoped to the <em>function</em> in which they are declared, while <code>let</code> variables are scoped to the <em>block</em> in which they are declared.  One of the easiest examples to see this behavior is in a simple <code>for</code> loop.</p>
 
 
-  <div class="aside aside-info">
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+function loopStuff() {
+  for (var i = 0; i < 5; i++) {
+    // do stuff in the loop
+  }
+  console.log(i)
+}
+
+loopStuff() // => 5
+
+function loopMoreStuff() {
+  for (let i = 0; i < 5; i++) {
+    // do stuff in the loop
+  }
+  console.log(i)
+}
+
+loopMoreStuff() // => Uncaught ReferenceError: i is not defined
+
+</code>
+</pre>
+
+
+
+<p>In the function <code>loopStuff</code>, <code>var i</code> is still available outside the <code>for</code> loop so it can be logged to the console.  It is scoped to the function itself.</p>
+
+<p>In the function <code>loopMoreStuff</code>, <code>let i</code> is not available outside the block it is scoped to (the <code>for</code> loop).</p>
+
+<p>The main difference between <code>const</code> and <code>var</code>/<code>let</code> is that <code>const</code> cannot be reassigned.
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+let variableOne = 4
+variableOne = 5
+
+var variableTwo = 4
+variableTwo = 5
+
+const variableThree = 4
+variableThree = 5 // => Uncaught TypeError: Assignment to constant variable
+
+</code>
+</pre>
+
+</p>
+
+
+  <div class="aside aside-tip">
   
-    <h4>Note</h4>
+    <h4>Default to using const</h4>
     
   
   <div class="body">
-  <p>Once again, one of these courses or the other should be plenty of preparation.</p>
+  <p>Always use <code>const</code> as your default way to declare variables, unless you know specifically that you will need to reassign it, in which case use <code>let</code>.  You should rarely, if ever, use <code>var</code>.  For further reading, check out <a href="https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75">this article</a>.</p>
 
   </div>
 </div>
 
 
-<h3 id="learn-git-from-codecademy">Learn Git from Codecademy</h3>
+<h3 id="react-https-facebook-github-io-react"><a href="https://facebook.github.io/react/">React</a></h3>
 
-<p><a href="https://www.codecademy.com/learn/learn-git">Learn Git</a> is a free interactive course from Codecademy covering the fundamentals of version control with Git. As with the previous lessons, this can be completed entirely within the browser. This is the best browser-based introduction to Git that I&rsquo;ve seen.</p>
+<h4 id="using-map-with-components">Using <code>map</code> with Components</h4>
 
-<h3 id="try-git-from-code-school">Try Git from Code School</h3>
+<p><strong>Person.js</strong></p>
 
-<p><a href="https://try.github.io/">Try Git</a>, created by Code School in partnership with GitHub, is another good intro to Git. It doesn&rsquo;t have you do quite as much yourself as the Codecademy course, so I don&rsquo;t like it quite as well. It does not, however, require you to sign up for anything&mdash;not even a free account.</p>
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+class Person extends React.Component {
+  render() {
+    return (
+      &lt;li&gt;Hello, {this.props.person.name}!&lt;/li&gt;
+    )
+  }
+}
+
+export default Person
+
+</code>
+</pre>
+
+
+
+<p><strong>PersonList.js</strong></p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+import Person from './Person'
+
+class PersonList extends React.Component {
+  render() {
+    const people = [
+      { name: 'Dana', hair: 'blonde' },
+      { name: 'Nichole', hair: 'long' },
+      { name: 'Davey', hair: 'long gone' }
+    ]
+    return (
+      &lt;div&gt;
+        &lt;h2&gt;People&lt;/h2&gt;
+        {
+          people.map((person => &lt;Person person={person} /&gt;))
+        }
+      &lt;/div&gt;
+    )
+  }
+}
+
+export default PersonList
+
+</code>
+</pre>
+
+
+
+<h4 id="stateless-functional-components">Stateless Functional Components</h4>
+
+<p>Not every React Component needs to have state.  Many simply render a bit of <code>props</code> and UI.  For such components, we don&rsquo;t need to instantiate a whole class that inherits from <code>React.Component</code>, we can simply write a function that accepts <code>props</code> as an argument and returns the markup we need.</p>
+
+<p>For instance, in the previous example, the <code>Person</code> component can easily be re-written as a Stateless Functional Component.</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+function Person (props) {
+  return (
+    &lt;li&gt;Hello, {props.person.name}!&lt;/li&gt;
+  )
+}
+
+// Or...
+
+const Person = (props) => &lt;li&gt;Hello, {props.person.name}!&lt;/li&gt;
+
+</code>
+</pre>
+
+
+
+<h3 id="javascript-es6">JavaScript (ES6+)</h3>
+
+<h4 id="named-and-default-exports-and-imports">Named and default exports and imports</h4>
+
+<p>Prior to ES6, there were many competing ways to export and import JavaScript modules.  The most common were <a href="https://webpack.github.io/docs/commonjs.html">CommonJS</a> and <a href="http://requirejs.org/docs/whyamd.html">AMD</a>.  Luckily ES6 defined a specification for standardizing module export and import.</p>
+
+<p>There are two types of exports from any JS file - <em>named</em> and <em>default</em>.  The important thing to remember is that there can only be <em>one</em> default export per module, but there can be as many named exports as you want.</p>
+
+<p><strong>myModule.js</strong>
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+export const myNumber = 8
+
+export function sayHi () {
+  console.log('hello')
+}
+
+export default class MyClass {
+  add (a, b) {
+    return a + b
+  }
+}
+
+</code>
+</pre>
+
+</p>
+
+<p>The main difference is how they are imported.  Default exports get the most concise syntax:</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+import MyClass from 'myModule'
+
+const classInstance = new MyClass()
+classInstance.add(1, 2) // => 3
+
+</code>
+</pre>
+
+
+
+
+  <div class="aside aside-info">
+  
+    <h4>Default import naming</h4>
+    
+  
+  <div class="body">
+  <p>Since there can be only one default export per module, the name by which you import the default export is not important - you can name it whatever you want.  For instance, instead of importing as <code>MyClass</code>, we could have said <code>import LuftBallons from 'myModule'</code>, and it would have worked just fine.  To read more about default and named exports, click <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">here</a>.</p>
+
+  </div>
+</div>
+
+
+<p>Named exports get a slightly more verbose syntax for importing, and the names <em>are</em> important (otherwise it can&rsquo;t determine what you want to import).</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+import { myNumber, sayHi } from 'myModule'
+
+console.log(myNumber) // => 8
+
+sayHi() // => 'hello'
+
+</code>
+</pre>
+
+
+
+<p>If you need to import a named export under a different name&mdash;if, for example, you have another import or local variable with the same name&mdash;you can specifiy a different name using <em>as</em>.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+import { myNumber as num, sayHi as yo } from 'myModule'
+
+console.log(num) // => 8
+
+yo() // => 'hello'
+
+</code>
+</pre>
+
+
+
+<p>You can also combine default and named imports in the same line.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+import MyClass, { myNumber, sayHi } from 'myModule'
+
+</code>
+</pre>
+
+
+
+<h2 id="projects">Projects</h2>
+
+<ul>
+<li><a href="https://github.com/xtbc18s1/static-noteherder">Static Noteherder</a></li>
+<li>Noteherder: <a href="https://github.com/xtbc18s1/noteherder">Morning</a> | <a href="https://github.com/xtbc18s1/noteherder/tree/afternoon">Afternoon</a></li>
+</ul>
+
+<h2 id="homework">Homework</h2>
+
+<ul>
+<li>Finish styling <code>Sidebar</code>.</li>
+<li>Add JSX and style to <code>NoteList</code> and <code>NoteForm</code>.</li>
+</ul>
+
+<h3 id="bonus-credit">Bonus Credit</h3>
+
+<ul>
+<li>Store a list of hard-coded notes in <code>state</code>.</li>
+<li>Use <code>map</code> to list these notes in <code>NoteList</code>.</li>
+</ul>
+
+<h3 id="super-mega-bonus-credit">Super Mega Bonus Credit</h3>
+
+<p>Load a note into <code>NoteForm</code> when you click it in <code>NoteList</code>.</p>
 
 
 <footer class=" footline" >
@@ -942,20 +1267,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -966,125 +1277,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1358,22 +1550,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1486,6 +1662,155 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1496,10 +1821,10 @@
 
 
         
-            <a class="nav nav-prev" href="/prereqs/javascript/" title="JavaScript"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/week2/day5/" title="Day 5: Intro to React"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/prereqs/terminal/" title="Terminal" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/week2/day5/" title="Day 5: Intro to React" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
