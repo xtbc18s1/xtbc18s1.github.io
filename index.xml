@@ -175,7 +175,7 @@ Handling exceptions  try catch finally  Styling Flexbox  A Complete Guide to Fle
       <description>Wednesday, May 23, 2018
 Lecture Videos Morning:
  Playlist | Day 7, Part 1  Afternoon:
- Playlist | [Day 7, Part 1]()  Topics CSS-in-JS  Aphrodite: Support for colocating your styles with your JavaScript component.  React  Methods as props Controlled vs Uncontrolled Forms Controlled and uncontrolled form inputs in React don&amp;rsquo;t have to be complicated Component lifecycle methods (Docs)  componentDidMount()   JavaScript  Destructuring assignment Spread operator Property initializers (and arrow functions)  Firebase ↓  Getting started Re-base for syncing React state with Firebase  Examples React Methods as props Sometimes one component needs to update another component&amp;rsquo;s state.</description>
+ Playlist | Day 7, Part 1  Topics CSS-in-JS  Aphrodite: Support for colocating your styles with your JavaScript component.  React  Methods as props Controlled vs Uncontrolled Forms Controlled and uncontrolled form inputs in React don&amp;rsquo;t have to be complicated  JavaScript  Destructuring assignment Spread operator Property initializers (and arrow functions)  Examples React Methods as props Sometimes one component needs to update another component&amp;rsquo;s state.</description>
     </item>
     
     <item>

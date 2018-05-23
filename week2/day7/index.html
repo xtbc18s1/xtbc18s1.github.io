@@ -12,17 +12,17 @@
     <title>Day 7: Props and Restructuring :: Xtern Bootcamp 2018</title>
     
     
-    <link href="/css/nucleus.css?1527095299" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1527095299" rel="stylesheet">
-    <link href="/css/hybrid.css?1527095299" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1527095299" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1527095299" rel="stylesheet">
-    <link href="/css/auto-complete.css?1527095299" rel="stylesheet">
-    <link href="/css/theme.css?1527095299" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1527095299" rel="stylesheet">
+    <link href="/css/nucleus.css?1527106439" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1527106439" rel="stylesheet">
+    <link href="/css/hybrid.css?1527106439" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1527106439" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1527106439" rel="stylesheet">
+    <link href="/css/auto-complete.css?1527106439" rel="stylesheet">
+    <link href="/css/theme.css?1527106439" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1527106439" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1527095299"></script>
+    <script src="/js/jquery-2.x.min.js?1527106439"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1527095299"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1527095299"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1527106439"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1527106439"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1527095299"></script>
+<script type="text/javascript" src="/js/search.js?1527106439"></script>
 
     
   </div>
@@ -880,14 +880,12 @@
 <li><a href="#css-in-js">CSS-in-JS</a></li>
 <li><a href="#react">React</a></li>
 <li><a href="#javascript">JavaScript</a></li>
-<li><a href="#firebase-firebase">Firebase <a href="#firebase">↓</a></a></li>
 </ul></li>
 <li><a href="#examples">Examples</a>
 <ul>
 <li><a href="#react-https-facebook-github-io-react"><a href="https://facebook.github.io/react/">React</a></a>
 <ul>
 <li><a href="#methods-as-props">Methods as props</a></li>
-<li><a href="#component-lifecycle-methods">Component lifecycle methods</a></li>
 </ul></li>
 <li><a href="#javascript-es6">JavaScript (ES6+)</a>
 <ul>
@@ -939,7 +937,7 @@
 <p>Afternoon:</p>
 
 <ul>
-<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | [Day 7, Part 1]()</li>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | <a href="https://www.youtube.com/watch?v=KLCIn7x5_3Y&amp;index=79&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Day 7, Part 1</a></li>
 </ul>
 
 <h2 id="topics">Topics</h2>
@@ -956,11 +954,6 @@
 <li>Methods as props</li>
 <li><a href="https://facebook.github.io/react/docs/forms.html">Controlled</a> vs <a href="https://facebook.github.io/react/docs/uncontrolled-components.html">Uncontrolled</a> Forms</li>
 <li><a href="https://goshakkk.name/controlled-vs-uncontrolled-inputs-react/">Controlled and uncontrolled form inputs in React don&rsquo;t have to be complicated</a></li>
-<li>Component lifecycle methods (<a href="https://facebook.github.io/react/docs/react-component.html">Docs</a>)
-
-<ul>
-<li><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount"><code>componentDidMount()</code></a></li>
-</ul></li>
 </ul>
 
 <h3 id="javascript">JavaScript</h3>
@@ -969,13 +962,6 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread operator</a></li>
 <li>Property initializers (and arrow functions)</li>
-</ul>
-
-<h3 id="firebase-firebase">Firebase <a href="#firebase">↓</a></h3>
-
-<ul>
-<li>Getting started</li>
-<li>Re-base for syncing React state with Firebase</li>
 </ul>
 
 <h2 id="examples">Examples</h2>
@@ -1024,36 +1010,6 @@ ReactDOM.render(&lt;App /&gt;, document.querySelector('main'))
 
   </code>
   </pre>
-
-
-
-<h4 id="component-lifecycle-methods">Component lifecycle methods</h4>
-
-<p><strong><code>componentDidMount()</code></strong> is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here.</p>
-
-
-<pre class="line-numbers language-jsx" rel="jsx">
-<code class="language-jsx">
-
-import React, { Component } from 'react'
-
-class MyComponent extends Component {
-  componentDidMount() {
-    this.nameInput.focus()
-  }
-
-  render() {
-    return (
-      &lt;input 
-        ref={(input) =&gt; { this.nameInput = input; }} 
-        defaultValue="will focus"
-      /&gt;
-    )
-  }
-}
-
-</code>
-</pre>
 
 
 
@@ -1866,20 +1822,20 @@ class Something extends React.Component {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1527095299"></script>
-    <script src="/js/perfect-scrollbar.min.js?1527095299"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1527095299"></script>
-    <script src="/js/jquery.sticky.js?1527095299"></script>
-    <script src="/js/featherlight.min.js?1527095299"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1527095299"></script>
-    <script src="/js/highlight.pack.js?1527095299"></script>
+    <script src="/js/clipboard.min.js?1527106439"></script>
+    <script src="/js/perfect-scrollbar.min.js?1527106439"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1527106439"></script>
+    <script src="/js/jquery.sticky.js?1527106439"></script>
+    <script src="/js/featherlight.min.js?1527106439"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1527106439"></script>
+    <script src="/js/highlight.pack.js?1527106439"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1527095299"></script>
-    <script src="/js/learn.js?1527095299"></script>
-    <script src="/js/hugo-learn.js?1527095299"></script>
+    <script src="/js/modernizr.custom.71422.js?1527106439"></script>
+    <script src="/js/learn.js?1527106439"></script>
+    <script src="/js/hugo-learn.js?1527106439"></script>
 
-    <link href="/mermaid/mermaid.css?1527095299" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1527095299"></script>
+    <link href="/mermaid/mermaid.css?1527106439" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1527106439"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
