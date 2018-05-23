@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Week One :: Xtern Bootcamp 2018</title>
+    <title>Day 7: Props and Restructuring :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1527095299" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/week1/">
+  <body class="" data-url="/week2/day7/">
     <nav id="sidebar" class="">
 
 
@@ -622,8 +622,8 @@
   
     
     <li data-nav-id="/week1/" title="Week One" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/week1/">
@@ -730,7 +730,7 @@
   
     
     <li data-nav-id="/week2/" title="Week Two" class="dd-item 
-        
+        parent
         
         
         ">
@@ -792,7 +792,7 @@
  
   
     
-      <li data-nav-id="/week2/day7/" title="Day 7: Props and Restructuring" class="dd-item ">
+      <li data-nav-id="/week2/day7/" title="Day 7: Props and Restructuring" class="dd-item active">
         <a href="/week2/day7/">
         Day 7: Props and Restructuring
         
@@ -844,6 +844,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -852,7 +854,13 @@
             
           
           
-            <a href='/'>Xtern Bootcamp 2018</a> > Week One
+            
+            
+          
+          
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week2/'>Week Two</a> > Day 7: Props and Restructuring
+          
+         
           
          
           
@@ -860,14 +868,57 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#lecture-videos">Lecture Videos</a></li>
+<li><a href="#topics">Topics</a>
+<ul>
+<li><a href="#css-in-js">CSS-in-JS</a></li>
+<li><a href="#react">React</a></li>
+<li><a href="#javascript">JavaScript</a></li>
+<li><a href="#firebase-firebase">Firebase <a href="#firebase">↓</a></a></li>
+</ul></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#react-https-facebook-github-io-react"><a href="https://facebook.github.io/react/">React</a></a>
+<ul>
+<li><a href="#methods-as-props">Methods as props</a></li>
+<li><a href="#component-lifecycle-methods">Component lifecycle methods</a></li>
+</ul></li>
+<li><a href="#javascript-es6">JavaScript (ES6+)</a>
+<ul>
+<li><a href="#destructuring-assignment">Destructuring assignment</a></li>
+<li><a href="#spread-operator">Spread operator</a></li>
+<li><a href="#property-initializers">Property initializers</a></li>
+<li><a href="#property-initializers-arrow-functions">Property initializers + arrow functions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#homework">Homework</a></li>
+<li><a href="#day-7-homework">Day 7 Homework</a>
+<ul>
+<li><a href="#bonus-credit">Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Day 7: Props and Restructuring</h1>
           
 
         
@@ -875,17 +926,333 @@
 
 
 
-<h1 id="week-one">Week One</h1>
+<p><date>Wednesday, May 23, 2018</date></p>
 
-<p>An overview of the course and web technologies, some vanilla JavaScript, and basic DOM manipulation.</p>
+<h2 id="lecture-videos">Lecture Videos</h2>
+
+<p>Morning:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=emiWhMcrhkc&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG&amp;index=77">Day 7, Part 1</a></li>
+</ul>
+
+<p>Afternoon:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | [Day 7, Part 1]()</li>
+</ul>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="css-in-js">CSS-in-JS</h3>
+
+<ul>
+<li><a href="https://github.com/Khan/aphrodite">Aphrodite</a>: Support for colocating your styles with your JavaScript component.</li>
+</ul>
+
+<h3 id="react">React</h3>
+
+<ul>
+<li>Methods as props</li>
+<li><a href="https://facebook.github.io/react/docs/forms.html">Controlled</a> vs <a href="https://facebook.github.io/react/docs/uncontrolled-components.html">Uncontrolled</a> Forms</li>
+<li><a href="https://goshakkk.name/controlled-vs-uncontrolled-inputs-react/">Controlled and uncontrolled form inputs in React don&rsquo;t have to be complicated</a></li>
+<li>Component lifecycle methods (<a href="https://facebook.github.io/react/docs/react-component.html">Docs</a>)
+
+<ul>
+<li><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount"><code>componentDidMount()</code></a></li>
+</ul></li>
+</ul>
+
+<h3 id="javascript">JavaScript</h3>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread operator</a></li>
+<li>Property initializers (and arrow functions)</li>
+</ul>
+
+<h3 id="firebase-firebase">Firebase <a href="#firebase">↓</a></h3>
+
+<ul>
+<li>Getting started</li>
+<li>Re-base for syncing React state with Firebase</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="react-https-facebook-github-io-react"><a href="https://facebook.github.io/react/">React</a></h3>
+
+<h4 id="methods-as-props">Methods as props</h4>
+
+<p>Sometimes one component needs to update another component&rsquo;s state. It can&rsquo;t do that directly, but it can call a method from that other component if it&rsquo;s available via a prop.</p>
+
+
+  <pre class="language-jsx line-numbers "
+       
+       
+       data-line="5,23"
+       rel="jsx"
+  ><code class="language-jsx">
+  
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+const PartyButton = ({ celebrate, celebrations }) =&gt; {
+  return &lt;button onClick={celebrate}&gt;Party! {celebrations}&lt;/button&gt;
+}
+
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      celebrations: 0,
+    }
+    this.celebrate = this.celebrate.bind(this)
+  }
+
+  celebrate() {
+    const celebrations = this.state.celebrations + 1
+    this.setState({ celebrations })
+  }
+
+  render() {
+    return &lt;PartyButton celebrate={this.celebrate} celebrations={this.state.celebrations} /&gt;
+  }
+}
+
+ReactDOM.render(&lt;App /&gt;, document.querySelector('main'))
+
+  </code>
+  </pre>
+
+
+
+<h4 id="component-lifecycle-methods">Component lifecycle methods</h4>
+
+<p><strong><code>componentDidMount()</code></strong> is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here.</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+import React, { Component } from 'react'
+
+class MyComponent extends Component {
+  componentDidMount() {
+    this.nameInput.focus()
+  }
+
+  render() {
+    return (
+      &lt;input 
+        ref={(input) =&gt; { this.nameInput = input; }} 
+        defaultValue="will focus"
+      /&gt;
+    )
+  }
+}
+
+</code>
+</pre>
+
+
+
+<h3 id="javascript-es6">JavaScript (ES6+)</h3>
+
+<h4 id="destructuring-assignment">Destructuring assignment</h4>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a> syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+const myObj = {
+  a: true,
+  b: 'Destructuring!'
+}
+
+let { a, b } = myObj
+
+console.log(a) // => true
+console.log(b) // => 'Destructuring!'
+
+</code>
+</pre>
+
+
+
+<h4 id="spread-operator">Spread operator</h4>
+
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator"><em>spread operator</em></a> was added in ES6 to allow an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) or multiple variables (for destructuring assignment) are expected.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+function myFunc (x, y, z) {
+  console.log(x)
+  console.log(y)
+  console.log(z)
+}
+const args = [1, 2, 3]
+
+myFunc(...args) // the spread '...args' applies the items in args to the three arguments in myFunc
+// => 1
+// => 2
+// => 3
+
+</code>
+</pre>
+
+
+
+<p>It is also an easy way to make copies of iterable objects</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+const ary = [1, 2, 3]
+const aryCopy = [...ary] // makes a copy of ary
+
+</code>
+</pre>
+
+
+
+<p>If you are in a project using Babel (like a React project created with <code>create-react-app</code>), you can also use the <code>object-rest-spread-transform</code> to apply this same method to objects.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+this.state = {'a': true, party: 'hard'}
+const stateCopy = {...this.state} // makes a copy of this.state
+
+</code>
+</pre>
+
+
+
+<h4 id="property-initializers">Property initializers</h4>
+
+
+  <div class="aside aside-info">
+  
+    <h4>Subject to minor changes</h4>
+    
+  
+  <div class="body">
+  <p><a href="https://github.com/tc39/proposal-class-public-fields">Property initializers</a> are a <a href="https://tc39.github.io/process-document/">Stage 3 proposal</a> for ECMAScript, meaning that they&rsquo;re a candidate, but requires further refinement and feedback from implementations and users before it becomes part of the standard. Facebook itself is already using these techniques in production, however.</p>
+
+  </div>
+</div>
+
+
+<p>From the proposal:</p>
+
+<blockquote>
+<p>&ldquo;Class instance fields&rdquo; describe properties intended to exist on instances of a class (and may optionally include initializer expressions for said properties).</p>
+</blockquote>
+
+<p>We can take advantage of this in React.</p>
+
+<p><a href="https://babeljs.io/blog/2015/06/07/react-on-es6-plus"><strong>Read more: Using ES7 property initializers in React</strong></a></p>
+
+<p>We can use a property initializer to set the initial value of state without writing a constructor:</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+class Song extends React.Component {
+  state = {
+    versesRemaining: 5,
+  }
+}
+
+</code>
+</pre>
+
+
+
+<p>We can even set default props and use those in the initial state:</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+class Song extends React.Component {
+  static defaultProps = {
+    autoPlay: false,
+    verseCount: 10,
+  }
+  state = {
+    versesRemaining: this.props.verseCount,
+  }
+}
+
+</code>
+</pre>
+
+
+
+<h4 id="property-initializers-arrow-functions">Property initializers + arrow functions</h4>
+
+<p>Combining property initializers and arrow functions gives us a convenient way to auto-bind <code>this</code>, since arrow functions inherit <code>this</code> from the scope in which they are declared (lexical scoping):</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+class Something extends React.Component {
+  handleButtonClick = (ev) => {
+    // `this` is bound correctly!
+    this.setState({ buttonWasClicked: true });
+  }
+}
+
+</code>
+</pre>
+
+
+
+<h2 id="projects">Projects</h2>
+
+<ul>
+<li>Noteherder <a href="https://github.com/xtbc18s1/noteherder">Morning</a> | <a href="https://github.com/xtbc18s1/noteherder/tree/afternoon">Afternoon</a></li>
+</ul>
+
+<h2 id="homework">Homework</h2>
+
+<h2 id="day-7-homework">Day 7 Homework</h2>
+
+<ul>
+<li>Make the delete button work.</li>
+</ul>
+
+<h3 id="bonus-credit">Bonus Credit</h3>
+
+<ul>
+<li>Persist the list of notes across page refreshes, using <code>localStorage</code>.</li>
+</ul>
+
+<h3 id="super-mega-bonus-credit">Super Mega Bonus Credit</h3>
+
+<ul>
+<li>Sign up for <a href="https://firebase.google.com/">Firebase</a>.</li>
+<li>Add the <a href="https://github.com/tylermcginnis/re-base">Re-base library</a> to your project.</li>
+<li>Sync your notes with Firebase.</li>
+<li>Profit.</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1336,90 +1703,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1476,6 +1759,91 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1486,10 +1854,10 @@
 
 
         
-            <a class="nav nav-prev" href="/tools/github-desktop/" title="GitHub Desktop"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/week2/day6/" title="Day 6: React"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/week1/day1/" title="Day 1: Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/week2/day5/" title="Day 5: Intro to React" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1519,3 +1887,4 @@
 
   </body>
 </html>
+

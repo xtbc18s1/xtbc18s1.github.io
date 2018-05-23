@@ -34,5 +34,17 @@ Recap  Reactrobats (take two): Morning  Lecture Videos Morning:
  Playlist | Day 6, Part 1  Topics Scope  Variable Scope (var, const, let)  React  Using map with components Stateless Functional Components  Functional Stateless Components in React Functional Components vs. Stateless Functional Components vs. Stateless Components Nine Wins You Might Have Overlooked  CSS in JS  Examples Variable Scope The biggest difference between var and let is that var variables are scoped to the function in which they are declared, while let variables are scoped to the block in which they are declared.</description>
     </item>
     
+    <item>
+      <title>Day 7: Props and Restructuring</title>
+      <link>http://xtbc18s1.github.io/week2/day7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xtbc18s1.github.io/week2/day7/</guid>
+      <description>Wednesday, May 23, 2018
+Lecture Videos Morning:
+ Playlist | Day 7, Part 1  Afternoon:
+ Playlist | [Day 7, Part 1]()  Topics CSS-in-JS  Aphrodite: Support for colocating your styles with your JavaScript component.  React  Methods as props Controlled vs Uncontrolled Forms Controlled and uncontrolled form inputs in React don&amp;rsquo;t have to be complicated Component lifecycle methods (Docs)  componentDidMount()   JavaScript  Destructuring assignment Spread operator Property initializers (and arrow functions)  Firebase ↓  Getting started Re-base for syncing React state with Firebase  Examples React Methods as props Sometimes one component needs to update another component&amp;rsquo;s state.</description>
+    </item>
+    
   </channel>
 </rss>
