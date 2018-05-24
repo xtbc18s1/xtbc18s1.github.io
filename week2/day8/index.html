@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Tools :: Xtern Bootcamp 2018</title>
+    <title>Day 8: Firebase Authentication :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1527194438" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/tools/">
+  <body class="" data-url="/week2/day8/">
     <nav id="sidebar" class="">
 
 
@@ -533,8 +533,8 @@
   
     
     <li data-nav-id="/tools/" title="Tools" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tools/">
@@ -730,7 +730,7 @@
   
     
     <li data-nav-id="/week2/" title="Week Two" class="dd-item 
-        
+        parent
         
         
         ">
@@ -811,7 +811,7 @@
  
   
     
-      <li data-nav-id="/week2/day8/" title="Day 8: Firebase Authentication" class="dd-item ">
+      <li data-nav-id="/week2/day8/" title="Day 8: Firebase Authentication" class="dd-item active">
         <a href="/week2/day8/">
         Day 8: Firebase Authentication
         
@@ -863,6 +863,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -871,7 +873,13 @@
             
           
           
-            <a href='/'>Xtern Bootcamp 2018</a> > Tools
+            
+            
+          
+          
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week2/'>Week Two</a> > Day 8: Firebase Authentication
+          
+         
           
          
           
@@ -879,14 +887,52 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#topics">Topics</a>
+<ul>
+<li><a href="#local-storage">Local Storage</a></li>
+<li><a href="#firebase-authentication">Firebase Authentication</a></li>
+</ul></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#local-storage-and-how-to-use-it-on-websites-https-www-smashingmagazine-com-2010-10-local-storage-and-how-to-use-it"><a href="https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/">Local Storage and How To Use It On Websites</a></a></li>
+<li><a href="#authentication">Authentication</a>
+<ul>
+<li><a href="#step-1-enable-google-authentication-in-firebase">Step 1: Enable Google authentication in Firebase</a></li>
+<li><a href="#step-2-add-firebase-auth-to-your-app">Step 2: Add Firebase auth to your app</a></li>
+<li><a href="#step-3-set-up-the-signin-component">Step 3: Set up the SignIn Component</a></li>
+<li><a href="#step-4-handling-auth-state-changes-and-page-refreshes">Step 4: Handling auth state changes (and page refreshes)</a></li>
+<li><a href="#step-5-finishing-sign-in">Step 5: Finishing sign-in</a></li>
+<li><a href="#step-6-signing-out">Step 6: Signing out</a></li>
+</ul></li>
+<li><a href="#rules">Rules</a></li>
+</ul></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#homework">Homework</a>
+<ul>
+<li><a href="#bonus-credit">Bonus Credit</a></li>
+<li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Day 8: Firebase Authentication</h1>
           
 
         
@@ -894,17 +940,297 @@
 
 
 
-<h1 id="tools">TOOLS</h1>
+<p><date>Thursday, May 24, 2018</date></p>
 
-<p>This guide includes information about additional tools and configuration options you may find helpful.</p>
+<p>Morning:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=KbKqR9PP4hE&amp;index=92&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Day 8, Part 1</a></li>
+</ul>
+
+<p>Afternoon:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | <a href="https://www.youtube.com/watch?v=Gru0Bj89Ar8&amp;index=96&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Day 8, Part 1</a></li>
+</ul>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="local-storage">Local Storage</h3>
+
+<h3 id="firebase-authentication">Firebase Authentication</h3>
+
+<ul>
+<li>&lsquo;firebase/auth&rsquo;</li>
+<li><code>authWithPopup</code></li>
+<li>signing in and out</li>
+<li>handling auth state changes</li>
+<li>database rules</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="local-storage-and-how-to-use-it-on-websites-https-www-smashingmagazine-com-2010-10-local-storage-and-how-to-use-it"><a href="https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/">Local Storage and How To Use It On Websites</a></h3>
+
+<h3 id="authentication">Authentication</h3>
+
+<p>Firebase isn&rsquo;t just a real-time database.  It can also provide authentication services via email/password, phone, or common third-party services like Github, Facebook, and Google. For <em>Noteherder</em>, we set up authentication via Google.</p>
+
+<h4 id="step-1-enable-google-authentication-in-firebase">Step 1: Enable Google authentication in Firebase</h4>
+
+<p>Go to your Firebase console and click on the &ldquo;Authentication&rdquo; tab in the &ldquo;Develop&rdquo; sidebar, then click on &ldquo;Sign-in method&rdquo;.  You&rsquo;ll see a list of the authentication methods allowed by Firebase.  Click on &ldquo;Google&rdquo; and then enable the toggle switch.</p>
+
+<h4 id="step-2-add-firebase-auth-to-your-app">Step 2: Add Firebase auth to your app</h4>
+
+<p><em>Note: This step assumes you already have your Firebase database added to your app.</em></p>
+
+<p>Import <code>firebase/auth</code> into your app&rsquo;s firebase setup.  Enable firebase auth and also create an instance of <code>GoogleAuthProvider</code>.</p>
+
+<p><strong>base.js</strong></p>
+
+
+  <pre class="language-js line-numbers "
+       
+       
+       data-line="4,17,18"
+       rel="js"
+  ><code class="language-js">
+  
+import Rebase from 're-base'
+import firebase from 'firebase/app'
+import from 'firebase/database'
+import 'firebase/auth'
+
+const app = firebase.initializeApp({
+  apiKey: "YOURAPIKEY",
+  authDomain: "YOURAUTHDOMAIN",
+  databaseURL: "YOURDATABASEURL",
+  projectId: "YOURPROJECTID",
+  storageBucket: "YOURSTORAGEBUCKET",
+  messagingSenderId: "YOURSENDERID"
+})
+
+const db = firebase.database(app)
+
+export const auth = app.auth()
+export const googleProvider = new firebase.auth.GoogleAuthProvider()
+
+export default Rebase.createClass(db)
+
+  </code>
+  </pre>
+
+
+
+<h4 id="step-3-set-up-the-signin-component">Step 3: Set up the SignIn Component</h4>
+
+<p>Import <code>auth</code> and the <code>googleProvider</code> into whatever component handles the sign-in process.  Call <code>signInWithPopup</code> on the <code>auth</code> object, passing the provider as a parameter.  This will launch a popup screen that will prompt the user to sign in using the provider you have specified.</p>
+
+<p><strong>SignIn.js</strong></p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+import React from 'react'
+import { auth, googleProvider } from './base'
+
+const SignIn = () => {
+  const authenticate = (provider) => {
+    auth.signInWithPopup(provider)
+  }
+
+  return (
+    &lt;button className="SignIn" onClick={() => authenticate(googleProvider)}&gt;
+      Sign In With Google
+    &lt;/button&gt;
+  )
+}
+
+export default SignIn
+
+</code>
+</pre>
+
+
+
+<h4 id="step-4-handling-auth-state-changes-and-page-refreshes">Step 4: Handling auth state changes (and page refreshes)</h4>
+
+<p>Once the user has authenticated via the popup, the state of our authorization has changed (we now have an authenticated user).  Other events that can cause auth state changes are signing out, timeouts, and page refreshes.  We should probably set up something to listen for these events.  In the <code>componentWillMount</code> lifecycle hook that runs when the Component is first getting loaded, we can call the <code>onAuthStateChanged</code> method provided on the global <code>auth</code> object to set up such a listener.</p>
+
+<p><strong>App.js</strong></p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+// ...
+
+componentWillMount() {
+  auth.onAuthStateChanged(
+    (user) => {
+      if (user) {
+        // finish signing in
+        this.authHandler(user)
+      } else {
+        // finished signing out
+        this.setState({ uid: null })
+      }
+    }
+  )
+}
+
+// ...
+
+</code>
+</pre>
+
+
+
+<h4 id="step-5-finishing-sign-in">Step 5: Finishing sign-in</h4>
+
+<p>What the <code>authHandler</code> callback does is up to you, but for <em>Noteherder</em>, we had it do pretty typical things - save the user ID to state, and initialize syncing our local state for &lsquo;notes&rsquo; with the data stored on Firebase.</p>
+
+<p><strong>App.js</strong></p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+// ...
+
+authHandler = (user) => {
+  this.setState(
+    { uid: user.uid },
+    this.syncNotes
+  )
+}
+
+// ...
+
+</code>
+</pre>
+
+
+
+<h4 id="step-6-signing-out">Step 6: Signing out</h4>
+
+<p>Signing out when using Firebase for authentication is also simple - just call <code>auth.signOut()</code>!  Once the promise returned by <code>signOut</code> has resolved, you can handle any additional cleanup.  In <em>Noteherder</em>, we stop syncing with Firebase and set <code>state.notes</code> back to an empty object.</p>
+
+<p><strong>App.js</strong></p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+// ...
+
+signOut = () => {
+  auth
+    .signOut()
+    .then(
+      () => {
+        // stop syncing with Firebase
+        base.removeBinding(this.ref)
+        this.setState({ notes: {} })
+      }
+    )
+}
+
+// ...
+
+</code>
+</pre>
+
+
+
+<h3 id="rules">Rules</h3>
+
+<p>For your Firebase database, you can set up rules (written in JSON) that specify the conditions under which data is allowed to be read or written.  By default, a newly generated project will require that a user be authenticated to read or write <em>any</em> data.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+
+</code>
+</pre>
+
+
+
+<p>If you do not have authentication set up yet, these values can be set to <code>true</code>.  This allows <em>anyone</em> to read or write any data in the database.  This can be convenient, but probably not a good idea long-term (and you <em>will</em> get a warning if you do that).</p>
+
+<p>Additional rules can be applied per endpoint:</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+{
+  "rules": {
+    "emails": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "texts": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "users": {
+      "$userId": {
+        ".read": "auth != null && auth.uid == $userId",
+        ".write": "auth != null && auth.uid == $userId"
+      }
+    }
+  }
+}
+
+</code>
+</pre>
+
+
+
+<p>The above rules translate to:</p>
+
+<ul>
+<li>texts and emails can be read by anyone, but only written by authenticated users</li>
+<li>users data can be read and written only by an authenticated user whose <code>uid</code> matches the <code>$userId</code> of that item</li>
+</ul>
+
+<h2 id="projects">Projects</h2>
+
+<p>Noteherder: <a href="https://github.com/xtbc18s1/noteherder">Morning</a> | <a href="https://github.com/xtbc18s1/noteherder/tree/afternoon">Afternoon</a></p>
+
+<h2 id="homework">Homework</h2>
+
+<ul>
+<li>Add Google authentication.</li>
+</ul>
+
+<h3 id="bonus-credit">Bonus Credit</h3>
+
+<ul>
+<li>If you&rsquo;re signed in, it briefly shows the <code>SignIn</code> component before showing <code>Main</code>. Fix that! Try storing <code>uid</code> in <code>localStorage</code>.</li>
+</ul>
+
+<h3 id="super-mega-bonus-credit">Super Mega Bonus Credit</h3>
+
+<ul>
+<li>Scope notes by user. Let each user have their own array of notes. (Try changing the <em>endpoint</em> argument to <code>base.syncState()</code>.)</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1291,7 +1617,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1299,89 +1624,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1514,6 +1756,91 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -1521,10 +1848,10 @@
 
 
         
-            <a class="nav nav-prev" href="/setup-windows/github/" title="GitHub"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/week2/day7/" title="Day 7: Props and Restructuring"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/tools/code-extensions/" title="VS Code Extensions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/week2/day5/" title="Day 5: Intro to React" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1554,3 +1881,4 @@
 
   </body>
 </html>
+
