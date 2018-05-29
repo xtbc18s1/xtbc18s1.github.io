@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Day 1: Introduction :: Xtern Bootcamp 2018</title>
+    <title>Day 9: Routing and Fetching :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1527620764" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/week1/day1/">
+  <body class="" data-url="/week3/day9/">
     <nav id="sidebar" class="">
 
 
@@ -622,7 +622,7 @@
   
     
     <li data-nav-id="/week1/" title="Week I" class="dd-item 
-        parent
+        
         
         
         ">
@@ -646,7 +646,7 @@
  
   
     
-      <li data-nav-id="/week1/day1/" title="Day 1: Introduction" class="dd-item active">
+      <li data-nav-id="/week1/day1/" title="Day 1: Introduction" class="dd-item ">
         <a href="/week1/day1/">
         Day 1: Introduction
         
@@ -838,7 +838,7 @@
   
     
     <li data-nav-id="/week3/" title="Week III" class="dd-item 
-        
+        parent
         
         
         ">
@@ -862,7 +862,7 @@
  
   
     
-      <li data-nav-id="/week3/day9/" title="Day 9: Routing and Fetching" class="dd-item ">
+      <li data-nav-id="/week3/day9/" title="Day 9: Routing and Fetching" class="dd-item active">
         <a href="/week3/day9/">
         Day 9: Routing and Fetching
         
@@ -928,7 +928,7 @@
             
           
           
-            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week1/'>Week I</a> > Day 1: Introduction
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week3/'>Week III</a> > Day 9: Routing and Fetching
           
          
           
@@ -945,27 +945,24 @@
 <li>
 <ul>
 <li><a href="#lecture-videos">Lecture Videos</a></li>
-<li><a href="#topics">Topics</a></li>
+<li><a href="#topics">Topics</a>
+<ul>
+<li><a href="#routing">Routing</a></li>
+<li><a href="#fetching-data">Fetching Data</a></li>
+</ul></li>
 <li><a href="#examples">Examples</a>
 <ul>
-<li><a href="#git">Git</a>
+<li><a href="#routing-1">Routing</a>
 <ul>
-<li><a href="#starting-a-new-project-with-a-git-repository">Starting a new project with a git repository</a></li>
-</ul></li>
-<li><a href="#dom-manipulation">DOM Manipulation</a></li>
-</ul></li>
-<li><a href="#presentations">Presentations</a></li>
+<li><a href="#router-setup">Router Setup</a></li>
+<li><a href="#routes">Routes</a></li>
 <li><a href="#links">Links</a></li>
-<li><a href="#projects">Projects</a>
-<ul>
-<li><a href="#first-js">First JS</a></li>
-<li><a href="#user-directory">User Directory</a></li>
+<li><a href="#history">History</a></li>
 </ul></li>
-<li><a href="#homework">Homework</a>
-<ul>
-<li><a href="#bonus-credit">Bonus Credit</a></li>
-<li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
+<li><a href="#fetch">Fetch</a></li>
 </ul></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#homework">Homework</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -980,7 +977,7 @@
         
         <div id="body-inner">
           
-            <h1>Day 1: Introduction</h1>
+            <h1>Day 9: Routing and Fetching</h1>
           
 
         
@@ -988,104 +985,54 @@
 
 
 
-<p><date>Monday, May 14, 2018</date></p>
+<p><date>Tuesday, May 29, 2018</date></p>
 
 <h2 id="lecture-videos">Lecture Videos</h2>
 
 <p>Morning:</p>
 
 <ul>
-<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;t=16s">Day 1, part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=v-5S_Jtb5N8&amp;index=101&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Day 9, Part 1</a></li>
 </ul>
 
 <p>Afternoon:</p>
 
 <ul>
-<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | <a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Day 1, part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | <a href="https://www.youtube.com/watch?v=qtEGlP8ZyGY&amp;index=105&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Day 9, Part 1</a></li>
 </ul>
 
 <h2 id="topics">Topics</h2>
 
-<ul>
-<li>History of JavaScript and the Web</li>
-<li>Getting the most out of a coding bootcamp</li>
-<li>Starting a project with git</li>
-<li>Anatomy of an HTML element (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">tags</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">attributes</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">text content</a>)</li>
-<li>Basic CSS selector syntax
+<h3 id="routing">Routing</h3>
 
 <ul>
-<li>Element name (<code>div</code>, <code>h1</code>, <code>p</code>, etc.)</li>
-<li>Element ID (<code>#theID</code>, <code>div#theID</code>, etc.)</li>
-<li>Class name (<code>.theClass</code>, <code>p.theClass</code>, etc.)</li>
-</ul></li>
-<li>Basic DOM manipulation
+<li>React Router
 
 <ul>
-<li><code>document.querySelector</code>/<code>document.querySelectorAll</code></li>
-<li><code>.textContent</code></li>
-<li><code>.innerHTML</code></li>
+<li><code>&lt;Router /&gt;</code></li>
+<li>Links and NavLinks</li>
+<li>Routes</li>
+<li><code>history</code></li>
 </ul></li>
-<li>Developer console
+</ul>
+
+<h3 id="fetching-data">Fetching Data</h3>
 
 <ul>
-<li><code>console.log</code></li>
-<li><code>debugger</code></li>
-</ul></li>
-<li>Basic <a href="https://www.w3schools.com/js/js_events.asp">event</a> handling
-
-<ul>
-<li><a href="https://www.kirupa.com/html5/javascript_events.htm">Events in JavaScript</a> - blog post with more detail than we discussed in class</li>
-<li><code>.addEventListener()</code> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">MDN docs</a></li>
-<li><code>.preventDefault()</code></li>
-<li><code>.target</code></li>
-</ul></li>
+<li>The Fetch API</li>
+<li>Promises</li>
+<li>Parsing the response</li>
 </ul>
 
 <h2 id="examples">Examples</h2>
 
-<h3 id="git">Git</h3>
+<h3 id="routing-1">Routing</h3>
 
-<h4 id="starting-a-new-project-with-a-git-repository">Starting a new project with a git repository</h4>
+<p><a href="https://github.com/ReactTraining/react-router">React Router</a> provides a routing solution that allows us to change what UI we render based on the current URL.  The router is a <em>Higher Order Component</em> that wraps a React app and allows us to navigate without additional requests and responses to and from the server.</p>
 
-<p>First make a new directory and then navigate into the new directory.  Then start a new repository with <code>git init</code>.</p>
+<h4 id="router-setup">Router Setup</h4>
 
-
-
-
-
-
-
-
-<div class="shell macos">
-<div class="bar">
-  <div class="controls">
-    <div class="windows icon">
-      <img src="/images/git-bash.png" alt="">
-    </div>
-    <div class="dot red">
-    </div>
-    <div class="dot yellow">
-    </div>
-    <div class="dot green">
-    </div>
-  </div>
-  user@localhost ~
-  <div class="windows-controls">
-    &nbsp;
-  </div>
-</div>
-<div class="shell-body">
-
-<pre><span class="terminal-commands"
-><span class="command-line-prompt"><span data-prompt="$"></span><span data-prompt="$"></span><span data-prompt="$"></span></span>mkdir my_new_project
-cd my_new_project
-git init
-</span></pre>
-
-</div>
-</div>
-
-<p>To be able to make our first commit, we need to first add something to our empty project folder.  A common first choice is a <code>README.md</code> file, which is a document written in <a href="https://guides.github.com/features/mastering-markdown/">markdown</a> that provides information about the project.</p>
+<p>Setting up React Router is easy. For web projects, install <code>react-router-dom</code></p>
 
 
 
@@ -1115,15 +1062,13 @@ git init
 <div class="shell-body">
 
 <pre><span class="terminal-commands"
-><span class="command-line-prompt"><span data-prompt="$"></span><span data-prompt="$"></span><span data-prompt="$"></span></span>echo &#34;# My New Project&#34; &gt;&gt; README.md
-git add .
-git commit -m &#34;Initial commit&#34;
+><span class="command-line-prompt"><span data-prompt="$"></span></span>yarn add react-router-dom  # install react router with yarn
 </span></pre>
 
 </div>
 </div>
 
-<p>Once we have our first commit, we can add a &lsquo;remote&rsquo; for our repository, like <a href="https://github.com">github</a> or <a href="https://bitbucket.org/">bitbucket</a>.  For github, log in to github.com, then hit the &lsquo;+&rsquo; button in the top right of the screen to add a new repository.  Then, it will give you the following commands to run from the command line.</p>
+<p>or</p>
 
 
 
@@ -1153,98 +1098,184 @@ git commit -m &#34;Initial commit&#34;
 <div class="shell-body">
 
 <pre><span class="terminal-commands"
-><span class="command-line-prompt"><span data-prompt="$"></span><span data-prompt="$"></span></span>git remote add origin git@github.com:myusername/my_new_project.git
-git push -u origin master
+><span class="command-line-prompt"><span data-prompt="$"></span></span>npm install --save react-router-dom  # install react router with npm
 </span></pre>
 
 </div>
 </div>
 
-<p>This adds the github remote as &lsquo;origin&rsquo; and sets it as the default for when you push your changes.  From this point forward, just type <code>git push</code> to push your changes to the remote.</p>
+<p>Then, in your <code>ReactDOM.render</code> call, attach the Router as your base element, wrapping the root-level <code>&lt;App /&gt;</code> component.  The whole app is now contained within the Router component, so we can take advantage of it anywhere.</p>
 
-<h3 id="dom-manipulation">DOM Manipulation</h3>
+<p><strong>index.js</strong></p>
 
 
-<pre class="line-numbers language-html" rel="html">
-<code class="language-html">
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
 
-&lt;div class=&quot;person&quot;&gt;
-  &lt;h2 id=&quot;firstName&quot;>Han&lt;/h2&gt;
-  &lt;h2 id=&quot;lastName&quot;>Solo&lt;/h2&gt;
-  &lt;p>Made the Kessel Run in less than 12 parsecs&lt;/p&gt;
-  &lt;button>Click here to hire me!&lt;/button&gt;
-&lt;/div&gt;
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './App'
+
+ReactDOM.render(
+  &lt;Router&gt;
+    &lt;App /&gt;
+  &lt;/Router&gt;,
+  document.getElementById('root')
+)
 
 </code>
 </pre>
 
 
+
+<h4 id="routes">Routes</h4>
+
+<p>The core of React Router is the <code>&lt;Route /&gt;</code> component.  It allows you to specify what UI to render when a particular URL is matched.  For instance, if we wanted to render a <code>&lt;Users /&gt;</code> component when we matched a <code>/users</code> URL, we could make the following Route:</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Route path='/users' component={Users} /&gt;
+
+</code>
+</pre>
+
+
+
+<p>If you don&rsquo;t want to render a whole component, a Route can alternatively accept a <code>render</code> prop, which accepts a function that returns JSX:</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Route path='/users' render={() => &lt;h1&gt;Users Path!&lt;/h1&gt;} /&gt;
+
+</code>
+</pre>
+
+
+
+<p>One important thing to keep in mind is that if we define a Route&rsquo;s path as <code>/users</code>, that will match both <code>/users</code> <em>and</em> <code>/users/123</code>, because both begin with <code>/users</code>.  If we want the Route to match only when the path is <em>exactly</em> <code>/users</code>, we can add the prop <code>exact</code> to our Route component.</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Route exact path='/users' component={Users} /&gt;
+
+</code>
+</pre>
+
+
+
+<h4 id="links">Links</h4>
+
+<p>React Router also provides <code>&lt;Link /&gt;</code> and <code>&lt;NavLink /&gt;</code> components to make it easy to generate links to Routes. If we want to generate a Link that goes to <code>/about</code>, we can do the following:</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Link to='/about'&gt;About&lt;/Link&gt;
+
+</code>
+</pre>
+
+
+
+<p>NavLinks are similar, but provide some additional functionality.  The main difference is that they will add an <code>activeClassName</code> to the rendered link if the current URL matches the <code>to</code> property of the NavLink.  This allows active links to be styled differently than inactive links.</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;NavLink to='/'&gt;Home&lt;/NavLink&gt;    // rendered link tag will have '.active' class when URL is '/'
+
+</code>
+</pre>
+
+
+
+<h4 id="history">History</h4>
+
+<p>The <code>history</code> object is maintained and updated by the Router to keep track of where the user has navigated within the app.  It is passed to every component contained within the Router as part of the component&rsquo;s <code>props</code>.  It has a variety of helpful properties and methods that provide information and navigation. Here are just a few:</p>
 
 
 <pre class="line-numbers language-js" rel="js">
 <code class="language-js">
 
-// Get all h2 elements with querySelectorAll. Returns a NodeList
-const headings = document.querySelectorAll('.person h2')
-console.log(headings)     // [h2#firstName, h2#lastName]
-
-// Get a single element with querySelector
-const heading = document.querySelector('.person h2')
-console.log(heading)      // h2#firstName
-
-// Do something when a click event occurs
-const button = document.querySelector('button')
-button.addEventListener('click', (ev) => {
-  alert('clicked!')
-  console.log(ev.target)  // button
-})
+history.length             // number of history entries
+history.location           // provides the current location
+history.push(path)         // navigates to a new path
+history.go(n)              // navigates n steps through history stack
+history.goBack()           // go back one step (history.go(-1))
+history.goForward()        // go forward one step (history.go(1))
+history.block(prompt)      // block navigation
 
 </code>
 </pre>
 
 
 
-<h2 id="presentations">Presentations</h2>
+<h3 id="fetch">Fetch</h3>
 
-<ul>
-<li><a target="_blank" href="/history-of-the-web.pdf">JavaScript History</a></li>
-<li><a target="_blank" href="/bootcamp-tips-expectations.pdf">Bootcamp Expectations and Tips for Success</a></li>
-</ul>
+<blockquote>
+<p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.  It also provides a global <code>fetch()</code> method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+</blockquote>
 
-<h2 id="links">Links</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"><em>MDN - Using Fetch</em></a></p>
 
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network (MDN)</a> - An excellent documentation and learning resource for all your HTML/CSS/JS needs</li>
-</ul>
+<p>If we need to get data from a remote server (or send some to one), there are several ways to do it.  In vanilla JS, there is <code>XMLHttpRequest</code>, jQuery provides <code>$.ajax</code>, and there are a variety of other packages and libraries that provide their own version.  Luckily, there is a new kid in vanilla JS town - the <em>Fetch API</em>.</p>
+
+<p><code>fetch()</code> is a globally available, easy to use way to asynchronously send and receive data.  The simplest usage of fetch is to simply provide it with the URL of the request, and it will perform a <code>GET</code> request by default.  The <code>fetch()</code> function returns a promise that resolves when the data is received.  Once it is received, we can process and use the data with functions provided to the promise&rsquo;s <code>.then()</code> callbacks.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+fetch('https://api.mywebsite.com/users')    // fetch users data from 'mywebsite' api
+  .then(response => response.json())        // parse the response json into JavaScript object(s)
+  .then(users => console.log(users))        // log the parsed users to the console
+  .catch(error => console.warn(error))      // if any errors occur, log them to the console
+
+</code>
+</pre>
+
+
+
+
+  <div class="aside aside-info">
+  
+    <h4>Fetch does more than just fetch</h4>
+    
+  
+  <div class="body">
+  <p>If no second argument is provided to <code>fetch()</code>, it defaults to a standard <code>GET</code> request.  However, the second argument can be a configuration object, allowing it to use different HTTP methods, set Headers, include Credentials, etc.  To find out more, check out <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">the docs</a></p>
+
+  </div>
+</div>
+
 
 <h2 id="projects">Projects</h2>
 
-<h3 id="first-js">First JS</h3>
-
-<p><a href="https://codepen.io/dstrus/pen/wjxWWB">CodePen</a></p>
-
-<h3 id="user-directory">User Directory</h3>
-
-<p><a href="https://github.com/xtbc18s1/user-directory/tree/f25073a1498ace91c218e3cd2cb193660b1e6efd">Morning</a> | <a href="https://github.com/xtbc18s1/user-directory/tree/fea585d14ab6c3c49600a1746e803fd7a666ec28">Afternoon</a></p>
+<ul>
+<li>Noteherder <a href="https://github.com/xtbc18s1/noteherder">Morning</a> | <a href="https://github.com/xtbc18s1/noteherder/tree/afternoon">Afternoon</a></li>
+<li>API Party <a href="https://github.com/xtbc18s1/api-party">Morning</a> | <a href="https://github.com/xtbc18s1/api-party/tree/afternoon">Afternoon</a></li>
+</ul>
 
 <h2 id="homework">Homework</h2>
 
-<ul>
-<li>Make the button change the text of the heading (the <code>&lt;h1&gt;</code>).</li>
-</ul>
+<p>Your assignment, should you choose to accept it (and you should), is to add some more routes to the API Party and fetch data from your favorite APIs. The API you choose is up to you, but be sure to get some data and try to display it in a visually-pleasing way.</p>
 
-<h3 id="bonus-credit">Bonus Credit</h3>
+<p>In case you don&rsquo;t have a favorite API, here are some suggestions:</p>
 
 <ul>
-<li>Add multiple headings to the page, and make the button change the <em>second</em> one.</li>
-</ul>
-
-<h3 id="super-mega-bonus-credit">Super Mega Bonus Credit</h3>
-
-<ul>
-<li>Add a form to the page</li>
-<li>Add a text input to the form.</li>
-<li>When the form is submitted, update the heading with the text that you type in the text input.</li>
+<li><a href="https://developers.google.com/maps">Google Maps</a></li>
+<li><a href="https://pokeapi.co">The Pokéapi</a></li>
+<li><a href="https://openweathermap.org/api">OpenWeatherMap</a></li>
+<li><a href="https://developer.spotify.com/web-api/">Spotify</a></li>
 </ul>
 
 
@@ -1703,91 +1734,6 @@ button.addEventListener('click', (ev) => {
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1892,6 +1838,88 @@ button.addEventListener('click', (ev) => {
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1902,10 +1930,10 @@ button.addEventListener('click', (ev) => {
 
 
         
-            <a class="nav nav-prev" href="/week1/" title="Week I"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/week3/" title="Week III"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/week1/day2/" title="Day 2: Functions and The DOM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/prereqs/" title="Prerequisites" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
