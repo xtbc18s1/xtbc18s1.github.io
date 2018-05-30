@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>JavaScript :: Xtern Bootcamp 2018</title>
+    <title>Day 10: Routing in Noteherder :: Xtern Bootcamp 2018</title>
     
     
     <link href="/css/nucleus.css?1527708525" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="/css/xtern.css" rel="stylesheet">
 
   </head>
-  <body class="" data-url="/prereqs/javascript/">
+  <body class="" data-url="/week3/day10/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/prereqs/" title="Prerequisites" class="dd-item 
-        parent
+        
         
         
         ">
@@ -138,7 +138,7 @@
  
   
     
-      <li data-nav-id="/prereqs/javascript/" title="JavaScript" class="dd-item active">
+      <li data-nav-id="/prereqs/javascript/" title="JavaScript" class="dd-item ">
         <a href="/prereqs/javascript/">
         JavaScript
         
@@ -838,7 +838,7 @@
   
     
     <li data-nav-id="/week3/" title="Week III" class="dd-item 
-        
+        parent
         
         
         ">
@@ -881,7 +881,7 @@
  
   
     
-      <li data-nav-id="/week3/day10/" title="Day 10: Routing in Noteherder" class="dd-item ">
+      <li data-nav-id="/week3/day10/" title="Day 10: Routing in Noteherder" class="dd-item active">
         <a href="/week3/day10/">
         Day 10: Routing in Noteherder
         
@@ -947,7 +947,7 @@
             
           
           
-            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/prereqs/'>Prerequisites</a> > JavaScript
+            <a href='/'>Xtern Bootcamp 2018</a> > <a href='/week3/'>Week III</a> > Day 10: Routing in Noteherder
           
          
           
@@ -963,13 +963,33 @@
 <ul>
 <li>
 <ul>
-<li><a href="#basic">Basic</a>
+<li><a href="#lecture-videos">Lecture Videos</a></li>
+<li><a href="#topics">Topics</a>
 <ul>
-<li><a href="#learn-javascript-by-codecademy">Learn JavaScript by Codecademy</a></li>
+<li><a href="#react-router">React Router</a></li>
+<li><a href="#deployment-of-react-app-with-routing">Deployment of React app with routing</a></li>
 </ul></li>
-<li><a href="#intermediate">Intermediate</a>
+<li><a href="#examples">Examples</a>
 <ul>
-<li><a href="#javascript-30-by-wes-bos">JavaScript 30 by Wes Bos</a></li>
+<li>
+<ul>
+<li><a href="#spread-operator">Spread operator</a></li>
+</ul></li>
+<li><a href="#react-router-1">React Router</a>
+<ul>
+<li><a href="#redirect-component">Redirect component</a></li>
+<li><a href="#passing-props-to-routed-components">Passing props to routed components</a></li>
+</ul></li>
+<li><a href="#deployment-of-a-react-app-with-routing">Deployment of a React app with routing</a>
+<ul>
+<li><a href="#github-pages">Github Pages</a></li>
+<li><a href="#firebase">Firebase</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#homework">Homework</a>
+<ul>
+<li><a href="#bonus-credit">Bonus Credit</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -985,7 +1005,7 @@
         
         <div id="body-inner">
           
-            <h1>JavaScript</h1>
+            <h1>Day 10: Routing in Noteherder</h1>
           
 
         
@@ -993,19 +1013,320 @@
 
 
 
-<p>React is a JavaScript library, so it&rsquo;s fair to say that we&rsquo;ll be using a whole heck of a lot of JavaScript in this bootcamp. You ought to be familiar with the fundamentals of JavaScript before class begins.</p>
+<p><date>Wednesday, May 30, 2018</date></p>
 
-<h2 id="basic">Basic</h2>
+<h2 id="lecture-videos">Lecture Videos</h2>
 
-<h3 id="learn-javascript-by-codecademy">Learn JavaScript by Codecademy</h3>
+<p>Morning:</p>
 
-<p><a href="https://www.codecademy.com/learn/learn-javascript">Learn JavaScript</a> is another free, interactive tutorial that replaced an older Codecademy course.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vGMMHQfp8Vk&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Playlist</a> | <a href="https://www.youtube.com/watch?v=fKl3euejY4Q&amp;index=120&amp;list=PLuT2TqJuwaY_Hj168ujFhP0w5HzmaDLfG">Day 10, Part 1</a></li>
+</ul>
 
-<h2 id="intermediate">Intermediate</h2>
+<p>Afternoon:</p>
 
-<h3 id="javascript-30-by-wes-bos">JavaScript 30 by Wes Bos</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uX8_DUKyTx0&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk">Playlist</a> | <a href="https://www.youtube.com/watch?v=S5FgvyVP_HE&amp;list=PLuT2TqJuwaY_XxGei4xUXZn9HuTU3jBRk&amp;index=124">Day 10, Part 1</a></li>
+</ul>
 
-<p>I highly recommend completing <a href="https://javascript30.com/">JavaScript 30</a> by Wes Bos. It&rsquo;s a series of thirty 20-minute videos, meant to be completed over the course of 30 days. That will take some planning on your part, obviously; you can&rsquo;t wait until the last second to dive into this stuff. But it&rsquo;s not a huge daily time commitment, and it will help a great deal.</p>
+<h2 id="topics">Topics</h2>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread operator</a></li>
+<li><a href="https://zhenyong.github.io/react/docs/jsx-spread.html">JSX Spread Attributes</a></li>
+</ul>
+
+<h3 id="react-router">React Router</h3>
+
+<ul>
+<li>Redirect component</li>
+<li>Passing props to components using <code>Route</code></li>
+</ul>
+
+<h3 id="deployment-of-react-app-with-routing">Deployment of React app with routing</h3>
+
+<ul>
+<li>GitHub Pages</li>
+<li>Firebase</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h4 id="spread-operator">Spread operator</h4>
+
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator"><em>spread operator</em></a> was added in ES6 to allow an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) or multiple variables (for destructuring assignment) are expected.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+function myFunc (x, y, z) {
+  console.log(x)
+  console.log(y)
+  console.log(z)
+}
+const args = [1, 2, 3]
+
+myFunc(...args) // the spread '...args' applies the items in args to the three arguments in myFunc
+// => 1
+// => 2
+// => 3
+
+</code>
+</pre>
+
+
+
+<p>It is also an easy way to make copies of iterable objects.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+const array = [1, 2, 3]
+const arrayCopy = [...array] // makes a copy of array
+
+</code>
+</pre>
+
+
+
+<p>If you are in a project using Babel (like a React project created with <code>create-react-app</code>), you can also use the <code>object-rest-spread-transform</code> to apply this same method to objects.</p>
+
+
+<pre class="line-numbers language-js" rel="js">
+<code class="language-js">
+
+this.state = {'a': true, party: 'hard'}
+const stateCopy = {...this.state} // makes a copy of this.state
+
+</code>
+</pre>
+
+
+
+<h3 id="react-router-1">React Router</h3>
+
+<h4 id="redirect-component">Redirect component</h4>
+
+<p>The <code>Redirect</code> component provided by React Router allows us to cause the user to navigate to a new location.  Just drop in a <code>Redirect</code> component and pass it a <code>to</code> prop to tell it where to redirect, and you&rsquo;re good to go!</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Redirect to='/widgets' /&gt;
+
+</code>
+</pre>
+
+
+
+<p>A common use case for a <code>Redirect</code> is to send a user to different locations based on whether they are logged in or not.</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+import { Route, Redirect } from 'react-router'
+
+&lt;Route exact path="/" render={() => (
+  loggedIn ? (
+    &lt;Redirect to="/dashboard"/&gt;
+  ) : (
+    &lt;PublicHomePage/&gt;
+  )
+)}/&gt;
+
+</code>
+</pre>
+
+
+
+<p>The code above translates to: &ldquo;If the path is at the root route (&lsquo;/&rsquo;), redirect to &lsquo;/dashboard&rsquo; if the user is logged in.  Otherwise, render the PublicHomePage.&rdquo;</p>
+
+<h4 id="passing-props-to-routed-components">Passing props to routed components</h4>
+
+<p>Here&rsquo;s a basic <code>Route</code> that renders a <code>Stuff</code> component when the path matches <code>'/stuff'</code>:</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Route path="/stuff" component={Stuff} /&gt;
+
+</code>
+</pre>
+
+
+
+<p>When <code>Stuff</code> is rendered, it will automatically receive <code>props</code> from the router that include <code>match</code>, <code>history</code>, and <code>location</code>.  But what if we want to pass additional props to <code>Stuff</code>?  It turns out, we can use the <code>render</code> prop for <code>Route</code> instead, which allows us to pass additional props when the anonymous function returns some JSX.</p>
+
+
+<pre class="line-numbers language-jsx" rel="jsx">
+<code class="language-jsx">
+
+&lt;Route path="/stuff" render={(props) => (
+  &lt;Stuff name="Bob" {...props} /&gt;
+)} /&gt;
+
+</code>
+</pre>
+
+
+
+<p>In this example, the anonymous function in the <code>render</code> for the <code>Route</code> receives an argument of <code>props</code> (which includes <code>match</code>, <code>history</code>, and <code>location</code>).  Our <code>render</code> method returns some JSX - specifically, the <code>&lt;Stuff /&gt;</code> component.  We pass along our existing <code>props</code> to <code>Stuff</code> via Object spread, as well as an additional <code>name</code> prop.</p>
+
+<h3 id="deployment-of-a-react-app-with-routing">Deployment of a React app with routing</h3>
+
+<p>Now that Noteherder has routing, deployment gets a bit more complicated.  Our app is a single-page application, so the server that our app is deployed to needs to always return <code>index.html</code> (the one page in our single-page app).  However, if we type <code>https://{yourdomainhere}/notes</code> in the address bar, the server will try to find a file called <code>notes.html</code> to send back (which it won&rsquo;t find, of course).  So how do we get it to always respond with <code>index.html</code> and let our client-side router handle the routing?  There are a few options:</p>
+
+<ol>
+<li>Configure the server to always return <code>index.html</code>, no matter what is requested. (ideal solution)</li>
+<li>Use <code>HashRouter</code> instead of <code>BrowserRouter</code></li>
+<li>Make a custom <code>404</code> page that is a copy of <code>index.html</code>.</li>
+</ol>
+
+<h4 id="github-pages">Github Pages</h4>
+
+<p>Github Pages does not allow for server configuration, so option #1 is out.  We <em>can</em>, however, do options #2 or 3. For our in-class example, we chose to use <code>HashRouter</code> to solve this problem. Simply swap out <code>BrowserRouter</code> for <code>HashRouter</code> in <code>index.js</code> and re-deploy.  This will make your in-app routes appear after a <code>#</code> in the URL, which prevents the server from trying to respond with a different page.  For example, <code>https://myusername.github.io/noteherder/notes</code> becomes <code>https://myusername.github.io/noteherder/#/notes</code> when using <code>HashRouter</code>.</p>
+
+<p><strong>index.js</strong></p>
+
+
+  <pre class="language-jsx  "
+       
+       
+       data-line="3"
+       rel="jsx"
+  ><code class="language-jsx">
+  
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
+
+
+import './index.css'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
+
+ReactDOM.render(
+  &lt;Router&gt;
+    &lt;Route component={App} /&gt;
+  &lt;/Router&gt;, 
+  document.getElementById('root')
+)
+registerServiceWorker()
+
+  </code>
+  </pre>
+
+
+
+<h4 id="firebase">Firebase</h4>
+
+<p>Firebase <em>does</em> allow for the server to be configured to always return <code>index.html</code>, so that is the option we chose during class.  To do so, we first need to install Firebase&rsquo;s CLI tools.</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+<pre><span class="terminal-commands"
+><span class="command-line-prompt"><span data-prompt="$"></span></span>npm install -g firebase-tools
+</span></pre>
+
+</div>
+</div>
+
+<p>Once the Firebase tools are installed, we can use them to login, initialize a firebase project, and deploy.  (Note, make sure you have made a production build with <code>npm run build</code> before deploying).</p>
+
+
+
+
+
+
+
+
+<div class="shell macos">
+<div class="bar">
+  <div class="controls">
+    <div class="windows icon">
+      <img src="/images/git-bash.png" alt="">
+    </div>
+    <div class="dot red">
+    </div>
+    <div class="dot yellow">
+    </div>
+    <div class="dot green">
+    </div>
+  </div>
+  user@localhost ~
+  <div class="windows-controls">
+    &nbsp;
+  </div>
+</div>
+<div class="shell-body">
+
+<pre><span class="terminal-commands"
+><span class="command-line-prompt"><span data-prompt="$"></span><span data-prompt="$"></span><span data-prompt="$"></span></span>firebase login
+firebase init
+firebase deploy
+</span></pre>
+
+</div>
+</div>
+
+
+  <div class="aside aside-info">
+  
+    <h4>Firebase Init</h4>
+    
+  
+  <div class="body">
+  <p><code>firebase init</code> will prompt you to answer a bunch of questions about how you want to configure the app you are deploying.  For more information about how to answer those questions, check out the <code>create-react-app</code> README <a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#firebase">here</a>.</p>
+
+  </div>
+</div>
+
+
+<h2 id="projects">Projects</h2>
+
+<p>Noteherder (with routing): <a href="https://github.com/xtbc18s1/noteherder">Morning</a> | <a href="https://github.com/xtbc18s1/noteherder/tree/afternoon">Afternoon</a></p>
+
+<h2 id="homework">Homework</h2>
+
+<ul>
+<li>Add an <code>updatedAt</code> field to notes (updating its value every time you save the note).</li>
+</ul>
+
+<h3 id="bonus-credit">Bonus Credit</h3>
+
+<ul>
+<li>Sort the notes in the list with the most recently updated at the top.</li>
+</ul>
 
 
 <footer class=" footline" >
@@ -1044,20 +1365,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1068,125 +1375,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1460,6 +1648,134 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1628,6 +1944,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1641,6 +1958,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1657,6 +1977,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1678,10 +1999,10 @@
 
 
         
-            <a class="nav nav-prev" href="/prereqs/html-css/" title="HTML &amp; CSS"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/week3/day9/" title="Day 9: Routing and Fetching"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/prereqs/git/" title="Git" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/week3/day9/" title="Day 9: Routing and Fetching" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

@@ -109,6 +109,18 @@ Cascading Stylesheets (CSS) define the presentation of web content. Even if you 
     </item>
     
     <item>
+      <title>Day 10: Routing in Noteherder</title>
+      <link>http://xtbc18s1.github.io/week3/day10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xtbc18s1.github.io/week3/day10/</guid>
+      <description>Wednesday, May 30, 2018
+Lecture Videos Morning:
+ Playlist | Day 10, Part 1  Afternoon:
+ Playlist | Day 10, Part 1  Topics  Spread operator JSX Spread Attributes  React Router  Redirect component Passing props to components using Route  Deployment of React app with routing  GitHub Pages Firebase  Examples Spread operator The spread operator was added in ES6 to allow an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) or multiple variables (for destructuring assignment) are expected.</description>
+    </item>
+    
+    <item>
       <title>Day 2: Functions and The DOM</title>
       <link>http://xtbc18s1.github.io/week1/day2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

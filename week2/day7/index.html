@@ -12,17 +12,17 @@
     <title>Day 7: Props and Restructuring :: Xtern Bootcamp 2018</title>
     
     
-    <link href="/css/nucleus.css?1527620764" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1527620764" rel="stylesheet">
-    <link href="/css/hybrid.css?1527620764" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1527620764" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1527620764" rel="stylesheet">
-    <link href="/css/auto-complete.css?1527620764" rel="stylesheet">
-    <link href="/css/theme.css?1527620764" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1527620764" rel="stylesheet">
+    <link href="/css/nucleus.css?1527708525" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1527708525" rel="stylesheet">
+    <link href="/css/hybrid.css?1527708525" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1527708525" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1527708525" rel="stylesheet">
+    <link href="/css/auto-complete.css?1527708525" rel="stylesheet">
+    <link href="/css/theme.css?1527708525" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1527708525" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1527620764"></script>
+    <script src="/js/jquery-2.x.min.js?1527708525"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1527620764"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1527620764"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1527708525"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1527708525"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1527620764"></script>
+<script type="text/javascript" src="/js/search.js?1527708525"></script>
 
     
   </div>
@@ -874,6 +874,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/week3/day10/" title="Day 10: Routing in Noteherder" class="dd-item ">
+        <a href="/week3/day10/">
+        Day 10: Routing in Noteherder
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -960,14 +979,12 @@
 <li><a href="#javascript-es6">JavaScript (ES6+)</a>
 <ul>
 <li><a href="#destructuring-assignment">Destructuring assignment</a></li>
-<li><a href="#spread-operator">Spread operator</a></li>
 <li><a href="#property-initializers">Property initializers</a></li>
 <li><a href="#property-initializers-arrow-functions">Property initializers + arrow functions</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#homework">Homework</a></li>
-<li><a href="#day-7-homework">Day 7 Homework</a>
+<li><a href="#homework">Homework</a>
 <ul>
 <li><a href="#bonus-credit">Bonus Credit</a></li>
 <li><a href="#super-mega-bonus-credit">Super Mega Bonus Credit</a></li>
@@ -1108,59 +1125,6 @@ console.log(b) // => 'Destructuring!'
 
 
 
-<h4 id="spread-operator">Spread operator</h4>
-
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator"><em>spread operator</em></a> was added in ES6 to allow an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) or multiple variables (for destructuring assignment) are expected.</p>
-
-
-<pre class="line-numbers language-js" rel="js">
-<code class="language-js">
-
-function myFunc (x, y, z) {
-  console.log(x)
-  console.log(y)
-  console.log(z)
-}
-const args = [1, 2, 3]
-
-myFunc(...args) // the spread '...args' applies the items in args to the three arguments in myFunc
-// => 1
-// => 2
-// => 3
-
-</code>
-</pre>
-
-
-
-<p>It is also an easy way to make copies of iterable objects</p>
-
-
-<pre class="line-numbers language-js" rel="js">
-<code class="language-js">
-
-const ary = [1, 2, 3]
-const aryCopy = [...ary] // makes a copy of ary
-
-</code>
-</pre>
-
-
-
-<p>If you are in a project using Babel (like a React project created with <code>create-react-app</code>), you can also use the <code>object-rest-spread-transform</code> to apply this same method to objects.</p>
-
-
-<pre class="line-numbers language-js" rel="js">
-<code class="language-js">
-
-this.state = {'a': true, party: 'hard'}
-const stateCopy = {...this.state} // makes a copy of this.state
-
-</code>
-</pre>
-
-
-
 <h4 id="property-initializers">Property initializers</h4>
 
 
@@ -1251,8 +1215,6 @@ class Something extends React.Component {
 </ul>
 
 <h2 id="homework">Homework</h2>
-
-<h2 id="day-7-homework">Day 7 Homework</h2>
 
 <ul>
 <li>Make the delete button work.</li>
@@ -1921,6 +1883,22 @@ class Something extends React.Component {
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1943,20 +1921,20 @@ class Something extends React.Component {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1527620764"></script>
-    <script src="/js/perfect-scrollbar.min.js?1527620764"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1527620764"></script>
-    <script src="/js/jquery.sticky.js?1527620764"></script>
-    <script src="/js/featherlight.min.js?1527620764"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1527620764"></script>
-    <script src="/js/highlight.pack.js?1527620764"></script>
+    <script src="/js/clipboard.min.js?1527708525"></script>
+    <script src="/js/perfect-scrollbar.min.js?1527708525"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1527708525"></script>
+    <script src="/js/jquery.sticky.js?1527708525"></script>
+    <script src="/js/featherlight.min.js?1527708525"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1527708525"></script>
+    <script src="/js/highlight.pack.js?1527708525"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1527620764"></script>
-    <script src="/js/learn.js?1527620764"></script>
-    <script src="/js/hugo-learn.js?1527620764"></script>
+    <script src="/js/modernizr.custom.71422.js?1527708525"></script>
+    <script src="/js/learn.js?1527708525"></script>
+    <script src="/js/hugo-learn.js?1527708525"></script>
 
-    <link href="/mermaid/mermaid.css?1527620764" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1527620764"></script>
+    <link href="/mermaid/mermaid.css?1527708525" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1527708525"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
