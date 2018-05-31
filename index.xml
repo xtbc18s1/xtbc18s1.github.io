@@ -225,6 +225,20 @@ iTerm2 is a popular alternative to Terminal.app. It&amp;rsquo;s free and include
     </item>
     
     <item>
+      <title>Wrapping Up</title>
+      <link>http://xtbc18s1.github.io/week3/day11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xtbc18s1.github.io/week3/day11/</guid>
+      <description>Thursday, May 31, 2018
+Lecture Videos Morning:
+ Playlist | Day 11, Part 1  Afternoon:
+ Playlist | Day 11, Part 1  Project Noteherder: Morning | Afternoon
+Topics  Array.prototype.sort() componentDidUpdate()   Resources for continued learning Congratulations, you survived the bootcamp! You’re all experts in React now, right?
+Just kidding. We’ve got a good handle on the basics of React and web development, but it’s important to keep pushing yourself to solidify the concepts you’ve learned and continue extending your skills.</description>
+    </item>
+    
+    <item>
       <title>Git</title>
       <link>http://xtbc18s1.github.io/prereqs/git/</link>
       <pubDate>Tue, 13 Mar 2018 16:21:52 -0400</pubDate>

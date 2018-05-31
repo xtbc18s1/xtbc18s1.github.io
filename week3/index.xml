@@ -34,5 +34,19 @@ Lecture Videos Morning:
  Playlist | Day 10, Part 1  Topics  Spread operator JSX Spread Attributes  React Router  Redirect component Passing props to components using Route  Deployment of React app with routing  GitHub Pages Firebase  Examples Spread operator The spread operator was added in ES6 to allow an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) or multiple variables (for destructuring assignment) are expected.</description>
     </item>
     
+    <item>
+      <title>Wrapping Up</title>
+      <link>http://xtbc18s1.github.io/week3/day11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xtbc18s1.github.io/week3/day11/</guid>
+      <description>Thursday, May 31, 2018
+Lecture Videos Morning:
+ Playlist | Day 11, Part 1  Afternoon:
+ Playlist | Day 11, Part 1  Project Noteherder: Morning | Afternoon
+Topics  Array.prototype.sort() componentDidUpdate()   Resources for continued learning Congratulations, you survived the bootcamp! You’re all experts in React now, right?
+Just kidding. We’ve got a good handle on the basics of React and web development, but it’s important to keep pushing yourself to solidify the concepts you’ve learned and continue extending your skills.</description>
+    </item>
+    
   </channel>
 </rss>
